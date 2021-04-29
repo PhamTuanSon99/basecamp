@@ -2,12 +2,17 @@
 // Banner
 // ----------------------------------------------------------------
 & when (@media-common=true) {
-    .content__container {
+    .container {
         max-width: 1920px;
-        padding: 0 70px;
+        padding: 0 3.65%;
         margin-top: 20px;
         color: @color-white;
         font-family: @font-caveat-brush-regular;
+
+        &.head__img {
+            background-color: @color-f0;
+            height: 521.25px;
+        }
     }
     .banner {
         &__img {
@@ -20,17 +25,37 @@
         
         &__content{
                 position: absolute;
-                top: 50%;
+                top: 44%;
                 left: 25%;
-                transform: translate(-50%, -50%);
+                transform: rotate(-5deg) translate(-50%, -50%);
+                width: 350px;
+                text-transform: uppercase;
         }
 
         &__title {
             font-size: 143px;
             letter-spacing: -4px;
-            line-height: 27px;
-            
+            line-height: 110px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-size: 56px;
+            line-height: 31px;
+            padding-right: 42px;
+            letter-spacing: -1px;
+            color: @color-ec2f67;
+            text-align: right;
+        }
+
+        &__logo {
+            width: 100%;
+            margin-top: -2px;
+
+            img {
+                padding: 0 107px;
+            }
         }
     }
-    
 }

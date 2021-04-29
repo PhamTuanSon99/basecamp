@@ -8,15 +8,25 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="page.wrapper">
-            <container name="body.banner" before="main.content" htmlTag="div" htmlClass="content__container">
-                <block class="Magento\Cms\Block\Block" name="content.banner">
+            <container name="img.banner" before="main.content" htmlTag="div" htmlClass="head__img container">
+                <block class="Magento\Cms\Block\Block" name="head.img.banner">
                     <arguments>
                         <argument name="block_id" xsi:type="string">content-banner</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="content.banner" after="img.banner" htmlTag="div" htmlClass="container">
+                <block class="Magento\Cms\Block\Block" name="logo.banner">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">logo-banner</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="profit.banner">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">profit-banner</argument>
                     </arguments>
                 </block>
             </container>
         </referenceContainer>
     </body>
 </page>
-
-
