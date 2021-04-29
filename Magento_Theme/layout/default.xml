@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/basecamp_logo.png</argument>
+                <argument name="logo_width" xsi:type="number">226</argument>
+                <argument name="logo_height" xsi:type="number">127</argument>
+                <argument name="logo_alt" xsi:type="string">Base Camp logo</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="header.panel.wrapper" remove="true" />
+    </body>
+</page>
