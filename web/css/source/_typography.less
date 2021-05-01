@@ -1,16 +1,14 @@
-.lib-font-face (
-    @family-name: 'OpenSans-Regular',
-    @font-path: '@{baseDir}fonts/OpenSans-Regular',
-    @font-style: normal
-);
-.lib-font-face (
-    @family-name: 'OpenSans-Bold',
-    @font-path: '@{baseDir}fonts/OpenSans-Bold',
-    @font-style: normal
-);
-.lib-font-face (
-    @family-name: 'Caveat Brush',
-    @font-path: '@{baseDir}fonts/CaveatBrush',
-    @font-style: normal
-);
-
+& when (@media-common =true) {
+    .lib-font-face(
+        @family-name: @font-opensans,
+        @font-path: '@{baseDir}fonts/Open_Sans/OpenSans-ExtraBold',
+        @font-weight: 800,
+        @font-style: normal,
+        @font-display: auto
+    );
+    .lib-font-face (
+        @family-name: @font-caveat-brush,
+        @font-path: '@{baseDir}fonts/CaveatBrush',
+        @font-style: normal
+    );
+}

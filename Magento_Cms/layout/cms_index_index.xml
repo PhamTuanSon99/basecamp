@@ -15,7 +15,7 @@
                     </arguments>
                 </block>
             </container>
-            <container name="content.banner" after="img.banner" htmlTag="div" htmlClass="container">
+            <container name="content.banner" after="img.banner" htmlTag="div" htmlClass="logo__img container">
                 <block class="Magento\Cms\Block\Block" name="logo.banner">
                     <arguments>
                         <argument name="block_id" xsi:type="string">logo-banner</argument>
@@ -24,6 +24,11 @@
                 <block class="Magento\Cms\Block\Block" name="profit.banner">
                     <arguments>
                         <argument name="block_id" xsi:type="string">profit-banner</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="offer.banner">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">offer-banner</argument>
                     </arguments>
                 </block>
             </container>
