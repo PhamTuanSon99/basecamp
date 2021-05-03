@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------
 & when (@media-common=true) {
     .nav-sections {
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
     }
     
     .container {
@@ -18,7 +18,7 @@
         }
 
         &.logo__img {
-            margin-top: 20px;
+            margin-top: 22px;
         }
     }
 
@@ -34,7 +34,6 @@
         &__content {
             position: absolute;
             transform: rotate(-5deg) translate(-50%, -50%);
-            width: 350px;
             text-transform: uppercase;
         }
 
@@ -78,6 +77,7 @@
         &__offer {
             display: flex;
             justify-content: space-between;
+            margin-top: 20px;
         }
     }
 
@@ -85,21 +85,23 @@
         &.title__img {
             top: 44%;
             left: 25%;
+            width: 350px;
         }
 
         &.profit__img {
             position: initial;
             transform: unset;
+            width: 343px;
         }
 
         &.summer__offer {
-            top: 50%;
-            left: 50%;
+            top: 32%;
+            left: 33%;
         }
 
         &.holiday__offer {
-            top: 50%;
-            left: 50%;
+            top: 44%;
+            left: 59%;
         }
     }
 
@@ -109,8 +111,7 @@
 
     .profit__content {
         position: absolute;
-        top: 50%;
-        // left: 50%;
+        top: 48%;
         transform: translateY(-39%);
         width: 100%;
         text-align: center;
@@ -118,5 +119,31 @@
         letter-spacing: -1px;
         font-family: @font-opensans;
         font-weight: 800;
+    }
+
+    .banner__content.profit__img {
+        &:nth-child(1) {
+            .profit__content {
+                left: -8px;
+            }
+        }
+
+        &:nth-child(2) {
+            .profit__content {
+                left: 8px;
+            }
+        }
+
+        &:nth-child(4) {
+            .profit__content {
+                left: -5px;
+            }
+        }
+
+        &:nth-child(5) {
+            .profit__content {
+                left: -15px;
+            }
+        }
     }
 }
