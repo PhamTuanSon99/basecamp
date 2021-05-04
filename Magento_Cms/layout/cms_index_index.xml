@@ -31,6 +31,16 @@
                         <argument name="block_id" xsi:type="string">offer-banner</argument>
                     </arguments>
                 </block>
+                <block class="Magento\Cms\Block\Block" name="service.banner">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">service-banner</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="advertisement.banner">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">advertisement-banner</argument>
+                    </arguments>
+                </block>
             </container>
         </referenceContainer>
     </body>

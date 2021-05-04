@@ -14,7 +14,6 @@
 
         &.head__img {
             background-color: @color-f0;
-            height: 521.25px;
         }
 
         &.logo__img {
@@ -25,6 +24,8 @@
     .banner {
         &__img {
             position: relative;
+            max-height: 521.25px;
+            height: auto;
 
             img {
                 width: 100%;
@@ -48,10 +49,8 @@
         &__subtitle {
             font-size: 56px;
             line-height: 31px;
-            padding-right: 42px;
             letter-spacing: -1px;
             color: @color-ec2f67;
-            text-align: right;
         }
 
         &__logo {
@@ -79,19 +78,36 @@
             justify-content: space-between;
             margin-top: 20px;
         }
+
+        &__service {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 11px;
+        }
+
+        &__ads {
+            position: relative;
+            margin-top: 20px;
+        }
     }
 
     .banner__content {
         &.title__img {
-            top: 44%;
-            left: 25%;
             width: 350px;
+            top: 45%;
+            left: 25%;
+
+            .banner__subtitle {
+                padding-right: 42px;
+                padding-top: 5px;
+                text-align: right;
+            }
         }
 
         &.profit__img {
             position: initial;
             transform: unset;
-            width: 343px;
+            width: 345px;
         }
 
         &.summer__offer {
@@ -102,6 +118,56 @@
         &.holiday__offer {
             top: 44%;
             left: 59%;
+
+            .banner__subtitle {
+                text-align: center;
+                padding-left: 21px;
+                padding-top: 5px;
+            }
+        }
+
+        &.half__price {
+            width: 350px;
+            bottom: -8%;
+            right: -13%;
+        }
+
+        &.ruck__sack {
+            width: 350px;
+            bottom: -6%;
+            right: -29%;
+
+            .banner__subtitle {
+                text-align: center;
+                padding-top: 5px;
+                padding-left: 32px;
+            }
+        }
+
+        &.climbing__equipment {
+            bottom: 16%;
+            left: 42%;
+        }
+
+        &.advertisement__banner {
+            top: 11%;
+            left: 7%;
+            transform: rotate(-2deg);
+
+            .banner__title {
+                font-size: 108px;
+                letter-spacing: -2.1px;
+            }
+
+            .banner__subtitle {
+                text-align: center;
+                color: unset;
+                transform: rotate(-3deg);
+                padding-left: 30px;
+                word-spacing: -3px;
+                width: 30%;
+                margin: 0 auto;
+            }
         }
     }
 
