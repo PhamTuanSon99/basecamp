@@ -1,0 +1,149 @@
+//
+// HomePage
+// ----------------------------------------------------------------
+& when (@media-common=true) {
+    .nav-sections {
+        margin-bottom: 0 !important;
+    }
+    
+    .container {
+        max-width: 1920px;
+        padding: 0 3.65%;
+        color: @color-white;
+        font-family: @font-caveat-brush;
+
+        &.head__img {
+            background-color: @color-f0;
+            height: 521.25px;
+        }
+
+        &.logo__img {
+            margin-top: 22px;
+        }
+    }
+
+    .banner {
+        &__img {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            position: absolute;
+            transform: rotate(-5deg) translate(-50%, -50%);
+            text-transform: uppercase;
+        }
+
+        &__title {
+            font-size: 143px;
+            letter-spacing: -4px;
+            line-height: 110px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-size: 56px;
+            line-height: 31px;
+            padding-right: 42px;
+            letter-spacing: -1px;
+            color: @color-ec2f67;
+            text-align: right;
+        }
+
+        &__logo {
+            width: 100%;
+            margin-top: -2px;
+
+            img {
+                padding: 0 107px;
+            }
+        }
+
+        &__profit {
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 7px;
+        }
+
+        &__items {
+            position: relative;
+        }
+
+        &__offer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    }
+
+    .banner__content {
+        &.title__img {
+            top: 44%;
+            left: 25%;
+            width: 350px;
+        }
+
+        &.profit__img {
+            position: initial;
+            transform: unset;
+            width: 343px;
+        }
+
+        &.summer__offer {
+            top: 32%;
+            left: 33%;
+        }
+
+        &.holiday__offer {
+            top: 44%;
+            left: 59%;
+        }
+    }
+
+    .banner__profit img {
+        max-height: 301px;
+    }
+
+    .profit__content {
+        position: absolute;
+        top: 48%;
+        transform: translateY(-39%);
+        width: 100%;
+        text-align: center;
+        font-size: 48px;
+        letter-spacing: -1px;
+        font-family: @font-opensans;
+        font-weight: 800;
+    }
+
+    .banner__content.profit__img {
+        &:nth-child(1) {
+            .profit__content {
+                left: -8px;
+            }
+        }
+
+        &:nth-child(2) {
+            .profit__content {
+                left: 8px;
+            }
+        }
+
+        &:nth-child(4) {
+            .profit__content {
+                left: -5px;
+            }
+        }
+
+        &:nth-child(5) {
+            .profit__content {
+                left: -15px;
+            }
+        }
+    }
+}
