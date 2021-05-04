@@ -1,0 +1,36 @@
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .minicart-wrapper {
+        .action.showcart {
+            &:before {
+                content         : 'Checkout';
+                color           : @color-white;
+                background-color: @color-btn-checkout;
+                font-size       : @font-size-checkout;
+                font-weight     : @font-weight-600;
+                padding         : 10px 62px;
+                margin-right    : 10px;
+                font-family     : @font-opensans;
+            }
+
+            &:hover:before,
+            &:active:before {
+                color: @color-white;
+            }
+        }
+
+        .action.showcart.active {
+
+            &:active:before,
+            &:hover:before {
+                content         : 'Checkout';
+                color           : @color-white;
+                background-color: @color-btn-checkout;
+                font-size       : @font-size-checkout;
+                font-weight     : @font-weight-600;
+                padding         : 10px 62px;
+                margin-right    : 10px;
+                font-family     : @font-opensans;
+            }
+        }
+    }
+}
