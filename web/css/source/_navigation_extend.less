@@ -1,12 +1,16 @@
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     .navigation {
-        top       : -46px;
-        text-align: center;
+        text-align      : center;
+        background-color: transparent;
 
-        .level0 > .level-top {
+        .level0>.level-top {
             font-size  : @font-size-18;
             font-weight: @font-weight-600;
             color      : @color-nav;
         }
+    }
+
+    .nav-sections-item-content {
+        margin-top: -47px;
     }
 }

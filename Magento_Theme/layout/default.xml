@@ -9,5 +9,12 @@
             </arguments>
         </referenceBlock>
         <referenceContainer name="header.panel.wrapper" remove="true" />
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Cms\Block\Block" after="logo" name="top.nav">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">top-nav</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>
