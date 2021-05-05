@@ -16,5 +16,22 @@
                 </arguments>
             </block>
         </referenceContainer>
+        <referenceContainer name="page.top">
+            <block class="Magento\Cms\Block\Block" after="-" name="promotion">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">promotion</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceContainer name="footer-container">
+            <block class="Magento\Cms\Block\Block" name="footer-info">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-info</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>
