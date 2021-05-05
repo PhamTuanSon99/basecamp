@@ -1,12 +1,13 @@
 @import '_layout_extend.less';
 @import '_navigation_extend.less';
 @import '_icons_extend.less';
+@import '_module_extend.less';
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     .top-nav {
         list-style-type: none;
-        text-align     : center;
         margin-bottom  : 0;
+        text-align     : center;
 
         li {
             display: inline-block;
@@ -21,36 +22,76 @@
     }
 
     .promotion {
-        width           : 100%;
         background-color: @color-promotion;
         display         : flex;
+        height          : 40px;
         justify-content : center;
         margin-top      : 10px;
+        width           : 100%;
 
         ul {
-            list-style-type: none;
-            font-size      : @font-size-promotion;
-            font-weight    : @font-weight-400;
             color          : @color-nav;
             display        : inline-flex;
+            font-size      : @font-size-promotion;
+            font-weight    : @font-weight-400;
             justify-content: space-between;
-            max-width      : 1780px;
-            padding        : 8px 0;
+            list-style-type: none;
             margin-bottom  : 0;
+            max-width      : 1780px;
             width          : inherit;
+            padding-left   : 0;
         }
 
         li {
             margin-bottom: 0;
+            display      : flex;
+            align-items  : center;
 
             img {
-                margin-right: 10px;
+                margin-right: 5px;
+            }
+
+            span {
+                display: inline-block;
+                padding: 10px;
             }
         }
     }
 
-    .ireland {
-        width : 28px;
-        height: 13px;
+    .minicart-wrapper .action.showcart .counter.qty {
+        position: absolute;
+        left    : -20%;
+    }
+
+    .footer__info {
+        display: flex;
+
+        .footer__block {
+            width: 25%;
+
+            ul {
+                list-style-type: none;
+                float          : left;
+                text-transform : capitalize;
+                padding-left   : 0;
+                width          : 100%;
+
+                .footer__title {
+                    color         : @color-footer-title;
+                    font-size     : 24px;
+                    font-weight   : 700;
+                    text-transform: uppercase;
+                }
+
+                li {
+                    font-size  : 20px;
+                    font-weight: 400;
+                    color      : @color-footer-content;
+                    font-family: @font-opensans;
+                }
+            }
+        }
+
+
     }
 }
