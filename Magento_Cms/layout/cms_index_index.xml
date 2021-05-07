@@ -43,9 +43,8 @@
                     </arguments>
                 </block>
             </container>
-            <container name="content.product.news" htmlTag="div" htmlClass="product__and__news container2">
-                <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::abc.phtml" name="product.content"/>
-                <!-- </block> -->
+            <container name="content.product.news" htmlTag="div" htmlClass="product__content container2">
+                <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::product.phtml" name="product.content"/>
             </container>
         </referenceContainer>
     </body>
