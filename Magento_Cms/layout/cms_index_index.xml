@@ -8,39 +8,44 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="page.wrapper">
-            <container name="img.banner" before="main.content" htmlTag="div" htmlClass="head__img container">
+            <referenceContainer name="main.content" remove="true" />
+            <container name="img.banner" htmlTag="div" htmlClass="head__img container1">
                 <block class="Magento\Cms\Block\Block" name="head.img.banner">
                     <arguments>
                         <argument name="block_id" xsi:type="string">content-banner</argument>
                     </arguments>
                 </block>
             </container>
-            <container name="content.banner" after="img.banner" htmlTag="div" htmlClass="logo__img container">
-                <block class="Magento\Cms\Block\Block" name="logo.banner">
+            <container name="content.banner" htmlTag="div" htmlClass="logo__img container1">
+                <block class="Magento\Cms\Block\Block" name="logo.content">
                     <arguments>
                         <argument name="block_id" xsi:type="string">logo-banner</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Cms\Block\Block" name="profit.banner">
+                <block class="Magento\Cms\Block\Block" name="profit.content">
                     <arguments>
                         <argument name="block_id" xsi:type="string">profit-banner</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Cms\Block\Block" name="offer.banner">
+                <block class="Magento\Cms\Block\Block" name="offer.content">
                     <arguments>
                         <argument name="block_id" xsi:type="string">offer-banner</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Cms\Block\Block" name="service.banner">
+                <block class="Magento\Cms\Block\Block" name="service.content">
                     <arguments>
                         <argument name="block_id" xsi:type="string">service-banner</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Cms\Block\Block" name="advertisement.banner">
+                <block class="Magento\Cms\Block\Block" name="advertisement.content">
                     <arguments>
                         <argument name="block_id" xsi:type="string">advertisement-banner</argument>
                     </arguments>
                 </block>
+            </container>
+            <container name="content.product.news" htmlTag="div" htmlClass="product__and__news container2">
+                <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::abc.phtml" name="product.content"/>
+                <!-- </block> -->
             </container>
         </referenceContainer>
     </body>
