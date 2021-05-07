@@ -1,18 +1,36 @@
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     .minicart-wrapper {
+        .action.showcart {
+            &:before {
+                content         : 'Checkout';
+                color           : @color-action-showcart;
+                background-color: @color-btn-checkout;
+                font-size       : @font-size-checkout;
+                font-weight     : 600;
+                padding         : 10px 62px;
+                margin-right    : 10px;
+                font-family     : @font-opensans;
+            }
+
+            &:hover:before,
+            &:active:before {
+                color: @color-white;
+            }
+        }
 
         .action.showcart,
         .action.showcart.active {
 
-            &:before,
-            &:hover:before,
-            &:active:before {
+            &:active:before,
+            &:hover:before {
+                content         : 'Checkout';
+                color           : @color-action-showcart;
                 background-color: @color-btn-checkout;
                 color           : @color-white;
                 content         : 'Checkout';
                 font-family     : @font-opensans;
                 font-size       : @font-size-checkout;
-                font-weight     : @font-weight-600;
+                font-weight     : 600;
                 padding         : 10px 62px;
 
             }

@@ -3,22 +3,29 @@
 // ----------------------------------------------------------------
 & when (@media-common=true) {
     .nav-sections {
-        margin-bottom: 0 !important;
+        margin-bottom: 48px !important;
     }
     
-    .container {
+    .container1 {
         max-width: 1920px;
-        padding: 0 3.65%;
-        color: @color-white;
+        margin: 0 3.65%;
+        color: @color-container1;
         font-family: @font-caveat-brush;
 
         &.head__img {
-            background-color: @color-f0;
+            background-color: @color-head-img;
         }
 
         &.logo__img {
             margin-top: 22px;
         }
+    }
+
+    .container2 {
+        max-width: 1920px;
+        margin: 0 3.125% 0 2.97%;
+        color: @color-container2;
+        font-family: @font-opensans;
     }
 
     .banner {
@@ -50,7 +57,7 @@
             font-size: 56px;
             line-height: 31px;
             letter-spacing: -1px;
-            color: @color-ec2f67;
+            color: @color-subtitle;
         }
 
         &__logo {
@@ -162,11 +169,15 @@
             .banner__subtitle {
                 text-align: center;
                 color: unset;
-                transform: rotate(-3deg);
-                padding-left: 30px;
+                transform: rotate(-3deg) translateX(14px);
                 word-spacing: -3px;
-                width: 30%;
+                width: 32.81%;
+                height: 47px;
                 margin: 0 auto;
+                padding-top: 12px;
+                border-radius: 31px;
+                background-color: @color-subtitle;
+                margin-top: -19px;
             }
         }
     }
