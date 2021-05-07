@@ -9,13 +9,13 @@
             </arguments>
         </referenceBlock>
         <referenceContainer name="header.panel.wrapper" remove="true" />
-        <referenceContainer name="header-wrapper">
+        <!-- <referenceContainer name="header-wrapper">
             <block class="Magento\Cms\Block\Block" after="logo" name="top.nav">
                 <arguments>
                     <argument name="block_id" xsi:type="string">top-nav</argument>
                 </arguments>
             </block>
-        </referenceContainer>
+        </referenceContainer> -->
         <referenceBlock name="form.subscribe" remove="true" />
         <referenceBlock name="footer_links" remove="true" />
     </body>
