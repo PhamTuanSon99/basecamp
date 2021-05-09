@@ -9,21 +9,12 @@
     <body>
         <referenceContainer name="page.wrapper">
             <referenceContainer name="main.content" remove="true" />
-            <container name="img.banner" htmlTag="div" htmlClass="head__img container1">
-                <block class="Magento\Framework\View\Element\Template" name="head.img.banner" template="Magento_Cms::content_banner.phtml">
-                </block>
+            <container name="img.cms" htmlTag="div" htmlClass="head__img container1">
+                <block class="Magento\Framework\View\Element\Template" name="head.img" template="Magento_Cms::content_cms.phtml"/>
             </container>
-            <container name="content.banner" htmlTag="div" htmlClass="logo__img container1">
-                <block class="Magento\Cms\Block\Block" name="logo.content">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">logo-banner</argument>
-                    </arguments>
-                </block>
-                <block class="Magento\Cms\Block\Block" name="profit.content">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">profit-banner</argument>
-                    </arguments>
-                </block>
+            <container name="content.cms" htmlTag="div" htmlClass="logo__img container1">
+                <block class="Magento\Framework\View\Element\Template" name="logo.content" template="Magento_Cms::logo_cms.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="profit.content" template="Magento_Cms::profit_cms.phtml"/>
                 <block class="Magento\Cms\Block\Block" name="offer.content">
                     <arguments>
                         <argument name="block_id" xsi:type="string">offer-banner</argument>
