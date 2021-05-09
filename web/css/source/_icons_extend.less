@@ -1,5 +1,7 @@
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     .minicart-wrapper {
+        margin-top: 34px;
+
         .action.showcart {
             &:before {
                 content         : 'Checkout';
@@ -7,8 +9,7 @@
                 background-color: @color-btn-checkout;
                 font-size       : @font-size-checkout;
                 font-weight     : 600;
-                padding         : 10px 62px;
-                margin-right    : 10px;
+                padding         : 8px 66px;
                 font-family     : @font-opensans;
             }
 
@@ -21,17 +22,16 @@
         .action.showcart,
         .action.showcart.active {
 
+            &:before,
             &:active:before,
             &:hover:before {
                 content         : 'Checkout';
                 color           : @color-action-showcart;
                 background-color: @color-btn-checkout;
-                color           : @color-white;
-                content         : 'Checkout';
                 font-family     : @font-opensans;
                 font-size       : @font-size-checkout;
                 font-weight     : 600;
-                padding         : 10px 62px;
+                padding         : 8px 66px;
 
             }
         }
