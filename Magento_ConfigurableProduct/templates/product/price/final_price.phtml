@@ -16,7 +16,7 @@ $schema = ($block->getZone() == 'item_view') ? true : false;
 <?php if ($block->hasSpecialPrice()) : ?>
     <span class="old-price sly-old-price">
         <?= /* @noEscape */ $block->renderAmount($priceModel->getAmount(), [
-            'display_label'     => __(''),
+            'display_label'     => __('Was'),
             'price_id'          => $block->getPriceId('old-price-' . $idSuffix),
             'price_type'        => 'oldPrice',
             'include_container' => true,
