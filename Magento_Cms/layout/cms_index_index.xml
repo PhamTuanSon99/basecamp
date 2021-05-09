@@ -10,10 +10,7 @@
         <referenceContainer name="page.wrapper">
             <referenceContainer name="main.content" remove="true" />
             <container name="img.banner" htmlTag="div" htmlClass="head__img container1">
-                <block class="Magento\Cms\Block\Block" name="head.img.banner">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">content-banner</argument>
-                    </arguments>
+                <block class="Magento\Framework\View\Element\Template" name="head.img.banner" template="Magento_Cms::content_banner.phtml">
                 </block>
             </container>
             <container name="content.banner" htmlTag="div" htmlClass="logo__img container1">
