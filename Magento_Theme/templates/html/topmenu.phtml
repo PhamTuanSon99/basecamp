@@ -18,7 +18,7 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
 <nav class="navigation" data-action="navigation">
     <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
         <li class="level0 category-item level-top ui-menu-item">
-            <a href="http://localhost/m235/" class="level-top"><span>Home</span></a>
+            <a href="<?= $block->getBaseUrl() ?>" class="level-top"><span>Home</span></a>
         </li>
         <?= /* @noEscape */ $_menuHtml ?>
         <li class="level0 category-item level-top ui-menu-item">
@@ -28,7 +28,7 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
             <a href="#" class="level-top"><span>Brand</span></a>
         </li>
         <li class="level0 category-item level-top ui-menu-item">
-            <a href="http://localhost/m235/contact/" class="level-top"><span>Contact us</span></a>
+            <a href="<?= $block->getUrl('contact') ?>" class="level-top"><span>Contact us</span></a>
         </li>
         <?= $block->getChildHtml() ?>
     </ul>

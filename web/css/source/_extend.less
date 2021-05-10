@@ -5,11 +5,13 @@
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     .top-nav {
         list-style-type: none;
+        margin-top     : -10px;
         margin-bottom  : 0;
         text-align     : center;
 
         li {
-            display: inline-block;
+            display     : inline-block;
+            margin-right: 46px;
 
             a {
                 color      : @color-top-nav-link;
@@ -57,9 +59,22 @@
         }
     }
 
-    .minicart-wrapper .action.showcart .counter.qty {
-        position: absolute;
-        left    : -20%;
+    .minicart-wrapper .action.showcart {
+        .counter.qty {
+            position     : absolute;
+            top          : 18%;
+            left         : -45%;
+            background   : @color-qty-minicart;
+            border-radius: 12px;
+        }
+
+        .counter-price {
+            position : absolute;
+            top      : 25%;
+            left     : -28%;
+            color    : @color-price-minicart;
+            font-size: @font-size-price-minicart;
+        }
     }
 
     .footer__info {
