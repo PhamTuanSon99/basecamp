@@ -15,23 +15,11 @@
             <container name="content.cms" htmlTag="div" htmlClass="logo__img container1">
                 <block class="Magento\Framework\View\Element\Template" name="logo.content" template="Magento_Cms::logo_cms.phtml"/>
                 <block class="Magento\Framework\View\Element\Template" name="profit.content" template="Magento_Cms::profit_cms.phtml"/>
-                <block class="Magento\Cms\Block\Block" name="offer.content">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">offer-banner</argument>
-                    </arguments>
-                </block>
-                <block class="Magento\Cms\Block\Block" name="service.content">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">service-banner</argument>
-                    </arguments>
-                </block>
-                <block class="Magento\Cms\Block\Block" name="advertisement.content">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">advertisement-banner</argument>
-                    </arguments>
-                </block>
+                <block class="Magento\Framework\View\Element\Template" name="offer.content" template="Magento_Cms::offer_cms.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="service.content" template="Magento_Cms::service_cms.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="adv.content" template="Magento_Cms::adv_cms.phtml"/>
             </container>
-            <container name="content.product.news" htmlTag="div" htmlClass="product__content container2">
+            <container name="content.product" htmlTag="div" htmlClass="product__content container2">
                 <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::product.phtml" name="product.content"/>
             </container>
         </referenceContainer>
