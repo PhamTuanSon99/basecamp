@@ -2,130 +2,140 @@
 @import '_navigation_extend.less';
 @import '_icons_extend.less';
 
-.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
-    .top-nav {
-        list-style-type: none;
-        margin-top     : -10px;
-        margin-bottom  : 0;
-        text-align     : center;
+.top-nav {
+    list-style-type: none;
+    margin-top     : -10px;
+    margin-bottom  : 0;
+    text-align     : center;
 
-        li {
-            display     : inline-block;
-            margin-right: 46px;
+    li {
+        display     : inline-block;
+        margin-right: 46px;
 
-            a {
-                color      : @color-top-nav-link;
-                font-size  : 13px;
-                font-weight: 400;
-            }
+        a {
+            color          : @color-top-nav-link;
+            font-size      : 13px;
+            font-weight    : 400;
+            text-decoration: none;
         }
-
     }
 
-    .promotion {
-        background-color: @color-promotion;
-        display         : flex;
-        height          : 40px;
-        justify-content : center;
-        margin-top      : 10px;
-        width           : 100%;
+}
+
+.promotion {
+    background-color: @color-promotion;
+    display         : flex;
+    height          : 40px;
+    justify-content : center;
+    margin-top      : 10px;
+    width           : 100%;
+
+    ul {
+        color          : @color-nav;
+        display        : inline-flex;
+        font-size      : @font-size-promotion;
+        font-weight    : 400;
+        justify-content: space-between;
+        list-style-type: none;
+        margin-bottom  : 0;
+        max-width      : 1780px;
+        width          : inherit;
+        padding-left   : 0;
+    }
+
+    li {
+        margin-bottom: 0;
+        display      : flex;
+        align-items  : center;
+
+        img {
+            margin-right: 5px;
+        }
+
+        span {
+            display: inline-block;
+            padding: 10px;
+        }
+    }
+}
+
+.minicart-wrapper .action.showcart {
+    .counter.qty {
+        position     : absolute;
+        top          : 20%;
+        left         : -44%;
+        background   : @color-qty-minicart;
+        border-radius: 12px;
+    }
+
+    .counter-price {
+        position : absolute;
+        top      : 25%;
+        left     : -28%;
+        color    : @color-price-minicart;
+        font-size: @font-size-price-minicart;
+    }
+}
+
+.footer__info {
+    background-color: @color-footer-background;
+    padding         : 62px 70px 0;
+    position        : relative;
+
+    .footer__block {
+        padding-left: 12px;
 
         ul {
-            color          : @color-nav;
-            display        : inline-flex;
-            font-size      : @font-size-promotion;
-            font-weight    : 400;
-            justify-content: space-between;
             list-style-type: none;
-            margin-bottom  : 0;
-            max-width      : 1780px;
-            width          : inherit;
+            float          : left;
+            text-transform : capitalize;
             padding-left   : 0;
-        }
+            width          : 100%;
+            margin-bottom  : 78px;
 
-        li {
-            margin-bottom: 0;
-            display      : flex;
-            align-items  : center;
-
-            img {
-                margin-right: 5px;
+            .footer__title {
+                color         : @color-footer-title;
+                font-size     : 24px;
+                font-weight   : 700;
+                text-transform: uppercase;
+                margin-bottom : 28px;
             }
 
-            span {
-                display: inline-block;
-                padding: 10px;
+            li {
+                font-size    : 20px;
+                font-weight  : 400;
+                color        : @color-footer-content;
+                font-family  : @font-opensans;
+                margin-top   : 8px;
+                margin-bottom: 0;
             }
-        }
-    }
 
-    .minicart-wrapper .action.showcart {
-        .counter.qty {
-            position     : absolute;
-            top          : 18%;
-            left         : -45%;
-            background   : @color-qty-minicart;
-            border-radius: 12px;
-        }
-
-        .counter-price {
-            position : absolute;
-            top      : 25%;
-            left     : -28%;
-            color    : @color-price-minicart;
-            font-size: @font-size-price-minicart;
-        }
-    }
-
-    .footer__info {
-        display         : flex;
-        flex-wrap       : wrap;
-        background-color: @color-footer-background;
-        padding         : 0 70px;
-
-        .footer__block {
-            width: 25%;
-
-            ul {
-                list-style-type: none;
-                float          : left;
-                text-transform : capitalize;
-                padding-left   : 0;
-                width          : 100%;
-                margin-bottom  : 0;
-
-                .footer__title {
-                    color         : @color-footer-title;
-                    font-size     : 24px;
-                    font-weight   : 700;
-                    text-transform: uppercase;
-                    margin-top    : 75px;
-                    margin-bottom : 20px;
-                }
-
-                li {
-                    font-size    : 20px;
-                    font-weight  : 400;
-                    color        : @color-footer-content;
-                    font-family  : @font-opensans;
-                    margin-top   : 10px;
-                    margin-bottom: 0;
-                }
-
-                .line-bottom {
-                    border-bottom: solid 1px red;
-                    margin-top   : 20px;
-                    margin-bottom: 15px;
-                }
+            .line-bottom {
+                border-bottom: solid 1px red;
+                margin-top   : 28px;
+                margin-bottom: 24px;
             }
         }
     }
 
     .copyright {
-        width           : 100%;
-        background-color: unset;
-        position        : absolute;
-        bottom          : 0;
-        left            : 0;
+        background-color: @color-footer-background;
+
+        img {
+            position: absolute;
+            bottom  : 130px;
+            left    : 46%;
+        }
+
+        p {
+            color      : @color-copyright;
+            font-weight: 400;
+            font-size  : @font-size-copyright;
+            position   : absolute;
+            left       : 41.2%;
+            bottom     : 58px;
+        }
     }
 }
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {}
