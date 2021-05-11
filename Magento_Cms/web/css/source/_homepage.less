@@ -1,4 +1,3 @@
-
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     div.nav-sections {
         margin-bottom: 0;
@@ -21,15 +20,19 @@
         }
 
         &.logo__img {
-            margin-top: 22px;
+            margin-top: 19px;
         }
     }
-    
+
     .container2 {
         max-width: 1920px;
         padding: 0 3.125% 0 2.97%;
         color: @color-container2;
         font-family: @font-opensans;
+
+        &.product__content {
+            margin-top: 1px;
+        }
     }
 
     .banner {
@@ -230,7 +233,7 @@
 
     .product {
         &__header {
-            margin-top: 36px;
+            margin: 36px 0 31px 0;
             text-align: center;
         }
 
@@ -249,5 +252,155 @@
         }
     }
 
+    .swatch-attribute.size {
+        display: none;
+    }
+
+    .product-item {
+        .old-price > .price-container.price-final_price.tax.weee {
+            text-decoration: line-through;
+            display: block;
+            font-weight: 400;
+            line-height: 22px;
+            color: @color-old-price;
+            word-spacing: -3px;
+        }
+
+        .price-box .price-label {
+            font-size: 14px;
+        }
+
+        .normal-price .price-container .price {
+            font-size: 24px;
+        }
+
+        &:nth-child(5n + 1) {
+            .product-item-name > a {
+                padding-right: 11px;
+            }
+            .price-container.price-final_price.tax.weee {
+                padding-right: 18px;
+            }
+        }
+        &:nth-child(5n + 2) {
+            .product-item-name > a {
+                padding-right: 7px;
+            }
+            .price-container.price-final_price.tax.weee {
+                padding-right: 21px;
+            }
+        }
+        &:nth-child(5n + 3) {
+            .product-item-name > a {
+                padding-right: 14px;
+            }
+            .price-container.price-final_price.tax.weee {
+                padding-right: 30px;
+            }
+        }
+        &:nth-child(5n + 4) {
+            .product-item-name > a {
+                padding-right: 22px;
+            }
+            .price-container.price-final_price.tax.weee {
+                padding-right: 35px;
+            }
+        }
+        &:nth-child(5n + 5) {
+            .product-item-name > a {
+                padding-right: 11px;
+            }
+            .price-container.price-final_price.tax.weee {
+                padding-right: 29px;
+            }
+        }
+    }
+
+    .product-item-name {
+        margin: 0;
+
+        > a {
+            font-size: 13px;
+        }
+    }
+
+    .product-item .price-box {
+        margin: 0 0 25px;
+    }
+
+    .page-layout-1column .block.widget .products-grid .product-item {
+        &:nth-child(n) {
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .product-image-container {
+        width: 100%;
+        border: 1px solid @color-border-product-cms;
+    }
+
     
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__xl) {
+    .page-layout-1column .block.widget .products-grid .product-item {
+        &:nth-child(n + 2) {
+            margin-left: 0.71%;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
+    .product-item-actions .actions-primary+.actions-secondary {
+        display: none;
+    }
+
+    .products-grid {
+        .product-item {
+            z-index: 10;
+            margin-bottom: 30px;
+
+            .product-item-details {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+        }
+
+        .product-item-info {
+            position: relative;
+            width: 100%;
+
+            &:not(:hover):not(.active) {
+                .product-item-inner {
+                    overflow: visible;
+                    position: relative;
+                    height: auto;
+                    width: auto;
+                    border: none;
+                    box-shadow: none;
+                    margin: 0;
+                }
+            }
+
+            &:hover {
+                box-shadow: none;
+                position: relative;
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .block.widget .products-grid .product-item .product-item-inner,
+    .page-layout-1column .block.widget .products-grid .product-item .product-item-inner {
+        box-shadow: none;
+        position: relative;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
 }
