@@ -1,0 +1,37 @@
+.minicart-wrapper {
+    margin-top: 34px;
+
+    .action.showcart {
+        &:before {
+            content         : 'Checkout';
+            color           : @color-action-showcart;
+            background-color: @color-btn-checkout;
+            font-size       : @font-size-checkout;
+            font-weight     : 600;
+            padding         : 8px 66px;
+            font-family     : @font-opensans;
+        }
+
+        &:hover:before,
+        &:active:before {
+            color: @color-white;
+        }
+    }
+
+    .action.showcart,
+    .action.showcart.active {
+
+        &:before,
+        &:active:before,
+        &:hover:before {
+            content         : 'Checkout';
+            color           : @color-action-showcart;
+            background-color: @color-btn-checkout;
+            font-family     : @font-opensans;
+            font-size       : @font-size-checkout;
+            font-weight     : 600;
+            padding         : 8px 66px;
+
+        }
+    }
+}

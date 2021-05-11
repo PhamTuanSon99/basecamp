@@ -8,15 +8,20 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="page.wrapper">
-            <container name="body.banner" before="main.content" htmlTag="div" htmlClass="content__container">
-                <block class="Magento\Cms\Block\Block" name="content.banner">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">content-banner</argument>
-                    </arguments>
-                </block>
+            <referenceContainer name="main.content" remove="true" />
+            <container name="img.cms" htmlTag="div" htmlClass="head__img container1">
+                <block class="Magento\Framework\View\Element\Template" name="head.img" template="Magento_Cms::content_cms.phtml"/>
+            </container>
+            <container name="content.cms" htmlTag="div" htmlClass="logo__img container1">
+                <block class="Magento\Framework\View\Element\Template" name="logo.content" template="Magento_Cms::logo_cms.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="profit.content" template="Magento_Cms::profit_cms.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="offer.content" template="Magento_Cms::offer_cms.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="service.content" template="Magento_Cms::service_cms.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="adv.content" template="Magento_Cms::adv_cms.phtml"/>
+            </container>
+            <container name="content.product" htmlTag="div" htmlClass="product__content container2">
+                <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::product.phtml" name="product.content"/>
             </container>
         </referenceContainer>
     </body>
 </page>
-
-

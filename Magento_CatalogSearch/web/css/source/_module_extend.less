@@ -1,0 +1,31 @@
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .logo {
+        margin: -8px auto 25px -10px;
+    }
+
+    .block-search {
+        float      : left;
+        margin-top : 14px;
+        margin-left: 315px;
+        width      : 666px;
+        height     : 50px;
+
+        .input-text {
+            width : 650px;
+            height: 50px;
+        }
+
+        .action.search,
+        .action.search[disabled] {
+            padding         : 8px 24px;
+            opacity         : unset;
+            background-color: @color-nav;
+            right           : 0;
+
+            &:before {
+                color    : @color-white;
+                font-size: @font-size-icon-search;
+            }
+        }
+    }
+}
