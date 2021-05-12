@@ -1,0 +1,31 @@
+& when (@media-common =true) {
+    .news {
+        &__heading {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: capitalize;
+            text-align: center;
+            padding: 31px 0 18px 0;
+            transform: translateX(8px);
+        }
+
+        &__banner {
+            float: left;
+            padding-left: 10px;
+            width: 49.5%;
+        }
+
+        &__body {
+            float: left;
+            width: 49.4%;
+            margin-left: 19px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__item {
+            max-width: 429px;
+            width: 100%;
+        }
+    }
+}
