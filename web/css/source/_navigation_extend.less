@@ -1,11 +1,42 @@
-.navigation {
-    text-align      : center;
-    background-color: unset;
-    margin-top      : -47px;
+& when (@media-common =true) {
+    .navigation {
+        text-align: center;
+        margin-top: -47px;
+    }
+}
 
-    .level0>.level-top {
-        font-size  : 18px;
-        font-weight: 600;
-        color      : @color-nav;
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .navigation {
+        background: unset;
+        top       : 14px;
+
+        .level0 {
+            margin-right: 0;
+        }
+
+        .level0>.level-top {
+            font-size  : 18px;
+            font-weight: 600;
+            color      : @color-nav;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__xl) {
+    .navigation {
+        text-align: unset;
+        top       : 0;
+
+        ul {
+            padding-left: 70px;
+        }
+
+        .level0 {
+            margin-left: 27px;
+        }
+
+        .level0>.level-top {
+            padding: 0;
+        }
     }
 }
