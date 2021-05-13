@@ -1,17 +1,60 @@
+& when (@media-common =true) {
+    .block-search {
+        margin-left: 17.7%;
+        width      : 37.4%;
+
+        .input-text {
+            width : 100%;
+            height: 50px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {}
+
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     .logo {
         margin: -8px auto 25px -10px;
     }
 
     .block-search {
+        margin-left: 6%;
+        width      : 37.4%;
         float      : left;
-        margin-top : 14px;
-        margin-left: 315px;
-        width      : 666px;
-        height     : 50px;
+        padding-top: 10px;
+
+        .action.search,
+        .action.search[disabled] {
+            opacity         : unset;
+            padding         : 8px 24px;
+            background-color: @color-nav;
+            right           : 0;
+            top             : 18%;
+
+            &:before {
+                color    : @color-white;
+                font-size: @font-size-icon-search;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
+    .block-search {
+        margin-left: 10%;
+        width      : 45%;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__xl) {
+
+    .block-search {
+        margin-left: 17%;
+        width      : 37.4%;
+        padding-top: 12px;
 
         .input-text {
-            width : 650px;
+            width : 100%;
             height: 50px;
         }
 
@@ -20,7 +63,8 @@
             padding         : 8px 24px;
             opacity         : unset;
             background-color: @color-nav;
-            right           : 0;
+            top             : 24%;
+            right           : -2%;
 
             &:before {
                 color    : @color-white;
