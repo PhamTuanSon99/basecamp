@@ -17,7 +17,7 @@
 
         &__body {
             float: left;
-            width: 49.4%;
+            max-width: 48.4%;
             margin-left: 19px;
             display: flex;
             justify-content: space-between;
@@ -26,6 +26,49 @@
         &__item {
             max-width: 429px;
             width: 100%;
+
+            &:nth-child(2) {
+                margin-left: -2px;
+
+                .news__info {
+                    padding-left: 0;
+                }   
+
+                .news__title {
+                    margin-top: 15px;
+                }
+
+                .news__subtitle {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &__info {
+            padding-left: 4px;
+            
+            a {
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: capitalize;
+                color: @color-btn-more;
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 13px;
+            line-height: 24px;
+            max-width: 409px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            margin-top: 21px;
+            margin-bottom: 19px;
         }
     }
 }
