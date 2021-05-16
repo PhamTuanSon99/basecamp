@@ -1,17 +1,19 @@
+//remove margin from navigation
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     div.nav-sections {
         margin-bottom: 0;
     }
 }
 
-@import '_product.less';
-@import '_news.less';
-
 
 //
 // HomePage
 // ----------------------------------------------------------------
 & when (@media-common=true) {
+
+    //
+    // Containers
+    // ----------------------------------------------------------------
     .container1 {
         max-width: 1920px;
         padding: 0 3.65%;
