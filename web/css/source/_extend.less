@@ -1,7 +1,7 @@
 @import "_layout_extend.less";
 @import "_navigation_extend.less";
 @import "_icons_extend.less";
-@import "_variables_extend.less";
+/* @import "_variables_extend.less"; */
 
 & when (@media-common =true) {
     .columns {
@@ -197,5 +197,11 @@
             left    : 40%;
             bottom  : -2%;
         }
+    }
+}
+
+@media screen and(max-width: @screen__custom) {
+    .minicart-wrapper {
+        margin-right: 12px;
     }
 }
