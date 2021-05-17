@@ -1,0 +1,124 @@
+//
+// Desktop
+// ----------------------------------------------------------------
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__xl) {
+    .banner {
+        &__title {
+            font-size: 143px;
+            line-height: 110px;
+        }
+
+        &__subtitle {
+            font-size: 56px;
+            line-height: 31px;
+        }
+
+        &__logo {
+            img {
+                padding: 0 107px;
+            }
+        }
+        &__profit > img {
+            max-height: 301px;
+        }
+    }
+
+    .banner__content {
+        &.title__img {
+            width: 350px;
+        }
+
+        &.profit__img {
+            width: 345px;
+        }
+
+        &.holiday__offer {
+            .banner__subtitle {
+                padding-left: 21px;
+                padding-top: 5px;
+            }
+        }
+
+        &.half__price,
+        &.ruck__sack {
+            width: 350px;
+        }
+
+        &.ruck__sack > .sub__title {
+            padding-left: 32px;
+        }
+
+        &.adv__body {
+            .banner__title {
+                font-size: 108px;
+            }
+
+            .banner__subtitle {
+                width: 32.81%;
+                height: 60px;
+                border-radius: 31px;
+                margin-top: -19px;
+            }
+        }
+    }
+
+    .banner__content.profit__img {
+        &:nth-child(1) {
+            .profit__content {
+                left: -8px;
+            }
+        }
+
+        &:nth-child(2) {
+            .profit__content {
+                left: 8px;
+            }
+        }
+
+        &:nth-child(4) {
+            .profit__content {
+                left: -5px;
+            }
+        }
+
+        &:nth-child(5) {
+            .profit__content {
+                left: -15px;
+            }
+        }
+    }
+
+    .profit__content {
+        font-size: 48px;
+    }
+}
+//
+// break = 1200px
+// ----------------------------------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .banner {
+        &__title {
+            font-size: 120px;
+            line-height: 93px;
+        }
+
+        &__subtitle {
+            font-size: 45px;
+            line-height: 20px;
+        }
+    }
+
+    .banner__content {
+        &.title__img {
+            width: 250px;
+            
+            .banner__subtitle {
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .profit__content {
+        font-size: 36px;
+    }
+}
