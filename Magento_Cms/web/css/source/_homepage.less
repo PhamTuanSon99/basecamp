@@ -1,17 +1,19 @@
+//remove margin from navigation
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     div.nav-sections {
         margin-bottom: 0;
     }
 }
 
-@import '_product.less';
-@import '_news.less';
-
 
 //
-// HomePage
+// Common
 // ----------------------------------------------------------------
 & when (@media-common=true) {
+
+    //
+    // Containers
+    // ----------------------------------------------------------------
     .container1 {
         max-width: 1920px;
         padding: 0 3.65%;
@@ -62,16 +64,12 @@
         }
 
         &__title {
-            font-size: 143px;
             letter-spacing: -4px;
-            line-height: 110px;
             font-weight: 400;
             text-align: center;
         }
 
         &__subtitle {
-            font-size: 56px;
-            line-height: 31px;
             letter-spacing: -1px;
             color: @color-subtitle;
         }
@@ -79,10 +77,6 @@
         &__logo {
             width: 100%;
             margin-top: -2px;
-
-            img {
-                padding: 0 107px;
-            }
         }
 
         &__profit {
@@ -116,7 +110,6 @@
 
     .banner__content {
         &.title__img {
-            width: 350px;
             top: 45%;
             left: 25%;
 
@@ -130,7 +123,7 @@
         &.profit__img {
             position: initial;
             transform: unset;
-            width: 345px;
+            
         }
 
         &.summer__offer {
@@ -144,26 +137,21 @@
 
             .banner__subtitle {
                 text-align: center;
-                padding-left: 21px;
-                padding-top: 5px;
             }
         }
 
         &.half__price {
-            width: 350px;
             bottom: -10%;
             right: -13%;
         }
 
         &.ruck__sack {
-            width: 350px;
             bottom: -7%;
             right: -29%;
 
             .banner__subtitle {
                 text-align: center;
                 padding-top: 5px;
-                padding-left: 32px;
             }
         }
 
@@ -172,13 +160,12 @@
             left: 42%;
         }
 
-        &.advertisement__banner {
+        &.adv__body {
             top: 13%;
             left: 7%;
             transform: rotate(-2deg);
 
             .banner__title {
-                font-size: 108px;
                 letter-spacing: -2.1px;
             }
 
@@ -187,19 +174,11 @@
                 color: unset;
                 transform: rotate(-3deg) translateX(14px);
                 word-spacing: -3px;
-                width: 32.81%;
-                height: 60px;
                 margin: 0 auto;
                 padding-top: 12px;
-                border-radius: 31px;
                 background-color: @color-subtitle;
-                margin-top: -19px;
             }
         }
-    }
-
-    .banner__profit img {
-        max-height: 301px;
     }
 
     .profit__content {
@@ -208,36 +187,9 @@
         transform: translateY(-39%);
         width: 100%;
         text-align: center;
-        font-size: 48px;
         letter-spacing: -1px;
         font-family: @font-opensans;
         font-weight: 800;
-    }
-
-    .banner__content.profit__img {
-        &:nth-child(1) {
-            .profit__content {
-                left: -8px;
-            }
-        }
-
-        &:nth-child(2) {
-            .profit__content {
-                left: 8px;
-            }
-        }
-
-        &:nth-child(4) {
-            .profit__content {
-                left: -5px;
-            }
-        }
-
-        &:nth-child(5) {
-            .profit__content {
-                left: -15px;
-            }
-        }
     }
 }
 
