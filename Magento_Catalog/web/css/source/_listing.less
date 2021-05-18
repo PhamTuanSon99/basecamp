@@ -2,11 +2,37 @@
     .page-title-wrapper {
         text-align: center;
     }
-
+    .page-title-wrapper .page-title{
+        font-size: 24px;
+        line-height: 48px;
+        color: #646464;
+        font-weight: 400;
+    }
     .filter-options-content {
         display: block !important;
     }
-    // .toolbar-products {
-    //     display: none;
-    // }
+    .filter-options-content .items {
+        list-style-type: none;
+        .item::before {
+            content: '\e60b';
+            font-family: 'luma-icons';
+        }
+    }
+    .main .toolbar-products {
+        position: relative;
+        font-size: 16px;
+        .toolbar-sorter {
+            position: absolute;
+            right: 72%;
+        }
+        .toolbar-amount {
+            position: absolute;
+            text-align: end;
+            right: 12%;
+        }
+        .modes {
+            position: absolute;
+            right: 0;
+        }
+    }
 }

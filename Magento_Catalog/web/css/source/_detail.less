@@ -1,3 +1,39 @@
 & when (@media-common =true) {
-    
+    .page-layout-1column .column.main {
+        .product-info-main {
+            .lib-css(width, 32%);
+        }
+        .product.media {
+            .lib-css(width, 63.5%);
+        }
+        .product.info.detailed {
+            .lib-css(width, 63.5%);
+            float: left;
+        }
+        .related {
+            position: absolute;
+            top: 46.5%;
+            left: 65%;
+            width: 30%;
+        }
+    }
+    .product.media  .fotorama__wrap {
+        position: relative;
+        display: flex;
+        max-height: 862px;
+        .fotorama__stage {
+            width: 80% !important;
+            text-align: right;
+            max-height: 862px;
+        }
+        .fotorama__nav-wrap {
+            width: 20%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .product.media .button-wrapper {
+        display: flex;
+    }
 }

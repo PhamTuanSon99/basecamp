@@ -15,5 +15,31 @@
             <referenceBlock name="view.addto.compare" remove="true" />
             <referenceBlock name="view.addto.wishlist" remove="true" />
         </referenceContainer>
+        <referenceBlock name="product.info.details" template="Magento_Catalog::product/view/details.phtml" >
+            <referenceBlock name="product.attributes" remove="true" />
+            <referenceBlock name="product.info.description" as="description" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Overview</argument>
+                </arguments>
+            </referenceBlock>
+            <block class="Magento\Catalog\Block\Product\View" name="delivery" template="Magento_Catalog::delivery.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Delivery &amp; Returns</argument>
+                    <argument name="sort_order" xsi:type="string">20</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <move element="product.info.review" destination="product.info.main" after="product.info.price" />
+        <referenceContainer name="product.info.main" >
+            <referenceContainer name="product.info.price" >
+                <referenceContainer name="product.info.stock.sku" remove="true" >
+                </referenceContainer>
+                <!-- <referenceBlock name="product.info.review" template="Magento_Catalog::product/view/review.phtml" before="product.info.price" /> -->
+            </referenceContainer>   
+        </referenceContainer>
+        <referenceContainer name="product.info.media">
+            <block class="Magento\Framework\View\Element\Template" name="images.video.button" template="Magento_Catalog::product/images_video_button.phtml" after="-" />     
+        </referenceContainer>
+    
     </body>
 </page>
