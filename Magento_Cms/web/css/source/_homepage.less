@@ -1,7 +1,7 @@
 //remove margin from navigation
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     div.nav-sections {
-        margin-bottom: 0;
+        margin-bottom: 48px;
     }
 }
 
@@ -59,7 +59,7 @@
 
         &__content {
             position: absolute;
-            transform: rotate(-5deg) translate(-50%, -50%);
+            transform: rotate(-5deg);
             text-transform: uppercase;
         }
 
@@ -112,6 +112,7 @@
         &.title__img {
             top: 45%;
             left: 25%;
+            transform: rotate(-5deg) translate(-50%, -50%);
 
             .banner__subtitle {
                 padding-right: 42px;
