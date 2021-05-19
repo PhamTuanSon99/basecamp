@@ -21,16 +21,28 @@
         position: relative;
         display: flex;
         max-height: 862px;
+        height: 862px;
         .fotorama__stage {
             width: 80% !important;
             text-align: right;
             max-height: 862px;
+            position: absolute;
+            right: 0;
+            .fotorama__stage__shaft {
+                width: 100% !important;
+            }
         }
         .fotorama__nav-wrap {
             width: 20%;
             text-align: left;
-            display: flex;
-            flex-direction: column;
+            position: absolute;
+            .fotorama__nav__shaft {
+                display: flex;
+                flex-direction: column;
+            }
+            .fotorama__thumb-border {
+                display: none;
+            }
         }
     }
     .product.media .button-wrapper {
