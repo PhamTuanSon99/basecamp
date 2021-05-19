@@ -1,7 +1,7 @@
 @import "_layout_extend.less";
 @import "_navigation_extend.less";
 @import "_icons_extend.less";
-/* @import "_variables_extend.less"; */
+@import '_variables_extend.less';
 
 & when (@media-common =true) {
     .columns {
@@ -136,13 +136,13 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum ="min") and (@break =@screen__m) {
+@media screen and(min-width: @bootstrap__md) {
     .promotion {
         display: flex;
     }
 }
 
-.media-width(@extremum, @break) when (@extremum ="min") and (@break =@screen__xl) {
+@media screen and(min-width: @bootstrap__xl) {
     .block__1 {
         padding-left: 68px;
     }
@@ -178,7 +178,7 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum ="min") and (@break =@screen__l) {
+@media screen and(min-width: @bootstrap__lg) {
 
     .browse,
     .account {
@@ -200,7 +200,7 @@
     }
 }
 
-@media screen and(max-width: @screen__custom) {
+@media screen and(max-width: @bootstrap__custom) {
     .minicart-wrapper {
         margin-right: 12px;
     }
