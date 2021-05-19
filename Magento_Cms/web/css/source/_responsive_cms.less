@@ -1,7 +1,7 @@
 //
 // Desktop
 // ----------------------------------------------------------------
-.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__xl) {
+@media screen and (min-width: @bootstrap__xxl) {
     .banner {
         &__title {
             font-size: 143px;
@@ -26,26 +26,32 @@
     .banner__content {
         &.title__img {
             width: 350px;
+
+            .banner__subtitle {
+                padding-right: 42px;
+            }
         }
 
         &.profit__img {
             width: 345px;
         }
 
+        &.summer__offer {
+            width: 439px;
+        }
+
         &.holiday__offer {
+            width: 450px;
+
             .banner__subtitle {
-                padding-left: 21px;
+                padding-left: 17px;
                 padding-top: 5px;
             }
         }
 
         &.half__price,
-        &.ruck__sack {
+        &.ruck__sack {  
             width: 350px;
-        }
-
-        &.ruck__sack > .sub__title {
-            padding-left: 32px;
         }
 
         &.adv__body {
@@ -95,7 +101,7 @@
 //
 // break = 1200px
 // ----------------------------------------------------------------
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+@media screen and (min-width: @bootstrap__xl) {
     .banner {
         &__title {
             font-size: 120px;
