@@ -1,7 +1,7 @@
 //
 // Desktop
 // ----------------------------------------------------------------
-@media screen and (min-width: @bootstrap__xxl) {
+@media screen and (max-width: 1920px) { // 1400px -> 1920px
     .banner {
         &__title {
             font-size: 143px;
@@ -53,6 +53,12 @@
         &.ruck__sack {  
             width: 350px;
         }
+        
+        &.climbing__equipment {
+            .banner__subtitle {
+                letter-spacing: -1.8px;
+            }
+        }
 
         &.adv__body {
             .banner__title {
@@ -99,9 +105,9 @@
     }
 }
 //
-// break = 1200px
+// 1200px -> 1400px
 // ----------------------------------------------------------------
-@media screen and (min-width: @bootstrap__xl) {
+@media screen and (max-width: @bootstrap__xxl) {
     .banner {
         &__title {
             font-size: 120px;
@@ -116,6 +122,13 @@
         &__offer > .banner__content.summer__offer {
             left: 40%;
         }
+
+        &__logo {
+            img{
+                padding: 0;
+                text-align: center;
+            }
+        }
     }
 
     .banner__content {
@@ -126,9 +139,79 @@
                 padding-right: 20px;
             }
         }
+        
+        &.adv__body {
+            .banner__title {
+                font-size: 85px;
+            }
+
+            .banner__subtitle {
+                height: 45px;
+                margin-top: -22px;
+            }
+        }
     }
 
     .profit__content {
         font-size: 36px;
+    }
+}
+
+@media screen and (max-width: @bootstrap__xl) { // 992px -> 1200px
+    .banner {
+        &__title {
+            font-size: 95px;
+            line-height: 70px;
+        }
+
+        &__subtitle {
+            font-size: 40px;
+            line-height: 15px;
+        }
+    }
+
+    .banner__content {
+        &.summer__offer,
+        &.holiday__offer {
+            width: 250px;
+        }
+
+        &.half__price,
+        &.ruck__sack {
+            width: 220px;
+        }
+
+        &.adv__body {
+            .banner__title {
+                font-size: 78px;
+            }
+
+            .banner__subtitle {
+                height: 36px;
+                margin-top: -15px;
+            }
+        }
+    }
+
+    .profit__content {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: @bootstrap__lg) {
+    .banner {
+        &__title {
+            font-size: 75px;
+            line-height: 56px;
+        }
+
+        &__subtitle {
+            font-size: 35px;
+            line-height: 10px;
+        }
+    }
+
+    .profit__content {
+        font-size: 25px;
     }
 }
