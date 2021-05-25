@@ -1,7 +1,7 @@
 //
 // Desktop
 // ----------------------------------------------------------------
-@media screen and (max-width: 1920px) { // 1400px -> 1920px
+@media screen and (max-width: 1920px) { // 1920px
     .banner {
         &__title {
             font-size: 143px;
@@ -105,7 +105,7 @@
     }
 }
 //
-// 1200px -> 1400px
+// 1400px
 // ----------------------------------------------------------------
 @media screen and (max-width: @bootstrap__xxl) {
     .banner {
@@ -155,9 +155,15 @@
     .profit__content {
         font-size: 36px;
     }
+
+    .product__title,
+    .product__subtitle {
+        transform: unset;
+    }
 }
 
-@media screen and (max-width: @bootstrap__xl) { // 992px -> 1200px
+// 1200px
+@media screen and (max-width: @bootstrap__xl) { 
     .banner {
         &__title {
             font-size: 95px;
