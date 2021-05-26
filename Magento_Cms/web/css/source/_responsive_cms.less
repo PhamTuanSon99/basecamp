@@ -204,16 +204,52 @@
     }
 }
 
+// 992px
 @media screen and (max-width: @bootstrap__lg) {
     .banner {
         &__title {
-            font-size: 75px;
+            font-size: 70px;
             line-height: 56px;
         }
 
         &__subtitle {
             font-size: 35px;
             line-height: 10px;
+        }
+    }
+
+    .banner__content {
+        &.title__img {
+            width: 180px;
+        }
+
+        &.summer__offer,
+        &.holiday__offer {
+            width: 200px;
+        }
+
+        &.half__price,
+        &.ruck__sack {
+            width: 200px;
+        }
+
+        &.climbing__equipment {
+            .banner__subtitle {
+                font-size: 30px;
+            }
+        }
+
+        &.adv__body {
+            .banner__title {
+                font-size: 65px;
+            }
+
+            .banner__subtitle {
+                height: 25px;
+                font-size: 30px;
+                margin-top: -14px;
+                padding-top: 6px;
+            }
         }
     }
 
