@@ -1,6 +1,7 @@
 & when (@media-common =true) {
     .news {
         &__heading {
+            flex: 100%;
             font-size: 24px;
             font-weight: 700;
             text-transform: capitalize;
@@ -10,22 +11,20 @@
         }
 
         &__banner {
-            float: left;
-            padding-left: 10px;
-            width: 49.5%;
+            padding-left: 0.5%;
+            flex: 49.5%;
         }
 
         &__body {
-            float: left;
-            max-width: 48.4%;
-            margin-left: 19px;
+            flex: 48.4%;
+            // margin-left: 19px;
             display: flex;
             justify-content: space-between;
         }
 
         &__item {
             max-width: 429px;
-            width: 100%;
+            flex: 48%;
 
             &:nth-child(2) {
                 margin-left: -2px;
