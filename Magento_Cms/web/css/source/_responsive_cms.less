@@ -34,6 +34,11 @@
 
         &.profit__img {
             width: 345px;
+            margin-right: 0.5%;
+
+            &:nth-child(5) {
+                margin-right: 0;
+            }
         }
 
         &.summer__offer {
@@ -106,6 +111,23 @@
 }
 
 //
+// 1800px
+// ----------------------------------------------------------------
+@media screen and (max-width: @bootstrap__custom) { 
+    .news__title {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 2px;
+    }
+
+    .news__subtitle {
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+//
 // 1400px
 // ----------------------------------------------------------------
 @media screen and (max-width: @bootstrap__xxl) {
@@ -161,7 +183,26 @@
     .product__subtitle {
         transform: unset;
     }
+
+    .news__title {
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+        letter-spacing: -1px;
+
+    }
+
+    .news__subtitle {
+        font-size: 12px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .new__info a {
+        font-size: 12px;
+    }
 }
+
 
 //
 // 1200px
