@@ -5,6 +5,7 @@
 @import "_navigation_extend.less";
 @import "_icons_extend.less";
 @import '_variables_extend.less';
+@import '_footer.less';
 
 & when (@media-common =true) {
     .columns {
@@ -87,69 +88,25 @@
             font-size: @font-size-price-minicart;
         }
     }
-
-    .footer__info {
-        background-color: @color-footer-background;
-        padding-top     : 62px;
-        position        : relative;
-
-        .footer__block {
-            ul {
-                list-style-type: none;
-                float          : left;
-                text-transform : capitalize;
-                padding-left   : 0;
-                width          : 100%;
-
-                .footer__title {
-                    color         : @color-footer-title;
-                    font-size     : 24px;
-                    font-weight   : 700;
-                    text-transform: uppercase;
-                    margin-bottom : 28px;
-                }
-
-                li {
-                    font-size    : 20px;
-                    font-weight  : 400;
-                    color        : @color-footer-content;
-                    font-family  : @font-opensans;
-                    margin-top   : 8px;
-                    margin-bottom: 0;
-                }
-
-                .line-bottom {
-                    border-bottom: solid 1px red;
-                    margin-top   : 24px;
-                    margin-bottom: 24px;
-                }
-            }
-        }
-
-        .footer-link {
-            font-size      : 20px;
-            font-weight    : 400;
-            color          : @color-footer-content;
-            font-family    : @font-opensans;
-            text-decoration: none;
-        }
-
-        .copyright {
-            background-color: @color-footer-background;
-
-            p {
-                color      : @color-copyright;
-                font-weight: 400;
-                font-size  : @font-size-copyright;
-                font-family: @font-opensans;
-            }
-        }
-    }
 }
 
 @media screen and(min-width: @bootstrap__md) {
     .promotion {
         display: flex;
+    }
+
+    .top-nav {
+        li {
+            margin-right: 18px;
+        }
+    }
+}
+
+@media screen and(max-width: @bootstrap__lg) {
+    .minicart-wrapper .action.showcart {
+        .counter.qty {
+            left: -85%;
+        }
     }
 }
 
