@@ -176,11 +176,6 @@ $_item = null;
             </div>
             <div class="block-content content" aria-labelledby="block-<?= $block->escapeHtmlAttr($class) ?>-heading">
                 <?php if ($type == 'related' && $canItemsAddToCart):?>
-                    <div class="block-actions">
-                        <?= $block->escapeHtml(__('Check items to add to the cart or')) ?>
-                        <button type="button" class="action select"
-                                data-role="select-all"><span><?= $block->escapeHtml(__('select all')) ?></span></button>
-                    </div>
                 <?php endif; ?>
                 <div class="products wrapper grid products-grid products-<?= $block->escapeHtmlAttr($type) ?>">
                     <ol class="products list items product-items">

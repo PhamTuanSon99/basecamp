@@ -47,5 +47,65 @@
     }
     .product.media .button-wrapper {
         display: flex;
+        justify-content: space-between;
+        .image,
+        .video {
+            width: 511px;
+            font-size: 14px;
+            color: #5b5b5b;
+            font-weight: 400;
+            font-family: @font-opensans;
+            button {
+                width: 100%;
+            }
+        }
+    }
+    .products-grid .product-item-actions {
+        display: none;
+    
+    }
+
+    .product.info.detailed .value {
+        font-size: 18px;
+        color: #6c6b6b;
+        font-weight: 400;
+    }
+    .product.info.detailed .data.switch p {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 600;
+    }
+    .product.attribute.overview .value {
+        font-size: 14px;
+        color: #5b5b5b;
+        font-weight: 400;
+    }
+    .related .title {
+        text-align: center;
+        font-size: 18px;
+        color: #6c6b6b;
+        font-weight: 700;
+    }
+    .box-tocart .action.tocart:not(:last-child) {
+        .lib-button(@_button-background: #7ebf3a,
+        @_button-background-active: #7ebf3a,
+        @_button-color: @color-white,
+        @_button-color-hover: @color-white,
+        @_button-color-active: @color-white,
+        @_button-border: 1px solid #7ebf3a,
+        @_button-font-size: 16px,
+        @_button-background-hover: #7ebf3a,
+        );
+        &.active {
+            background: #7ebf3a;
+        }
+        &:visited {
+            background: #7ebf3a;
+            color: @color-white;
+        }
+        .lib-css(width, 100%);
+        .lib-css(max-width, 100%);
+        .lib-css(transform, uppercase);
+        padding: 11px 15px;
     }
 }
