@@ -20,7 +20,28 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
         <li class="level0 category-item level-top ui-menu-item">
             <a href="<?= $block->getBaseUrl() ?>" class="level-top"><span>Home</span></a>
         </li>
-        <?= /* @noEscape */ $_menuHtml ?>
+        <!-- <?= /* @noEscape */ $_menuHtml ?> -->
+        <li class="level0 category-item level-top ui-menu-item">
+            <a href="#" class="level-top"><span>Hiking</span></a>
+        </li>
+        <li class="level0 category-item level-top ui-menu-item">
+            <a href="#" class="level-top"><span>Camping</span></a>
+        </li>
+        <li class="level0 category-item level-top ui-menu-item">
+            <a href="#" class="level-top"><span>Bootroom</span></a>
+        </li>
+        <li class="level0 category-item level-top ui-menu-item">
+            <a href="#" class="level-top"><span>Travel</span></a>
+        </li>
+        <li class="level0 category-item level-top ui-menu-item">
+            <a href="#" class="level-top"><span>Packs</span></a>
+        </li>
+        <li class="level0 category-item level-top ui-menu-item">
+            <a href="#" class="level-top"><span>Climbing</span></a>
+        </li>
+        <li class="level0 category-item level-top ui-menu-item">
+            <a href="#" class="level-top"><span>Fitness</span></a>
+        </li>
         <li class="level0 category-item level-top ui-menu-item">
             <a href="#" class="level-top"><span>Voucher</span></a>
         </li>
@@ -33,7 +54,8 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
         <?= $block->getChildHtml() ?>
     </ul>
 </nav>
-<div class="promotion">
+
+<div class="promotion container-fluid">
     <ul>
         <li>
             <img src="<?= $this->getViewFileUrl('Magento_Theme::images/ireland_flag.png'); ?>" alt="" />

@@ -9,7 +9,7 @@
             </arguments>
         </referenceBlock>
         <referenceContainer name="header.panel.wrapper" remove="true" />
-        <referenceBlock name="form.subscribe" remove="true" />
-        <referenceBlock name="footer_links" remove="true" />
+        <referenceContainer name="footer" remove="true" />
+        <referenceBlock name="copyright" remove="true" />
     </body>
 </page>

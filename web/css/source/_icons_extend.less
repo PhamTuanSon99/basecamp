@@ -4,7 +4,7 @@
     .action.showcart {
         &:before {
             content         : 'Checkout';
-            color           : @color-action-showcart;
+            color           : black;
             background-color: @color-btn-checkout;
             font-size       : @font-size-checkout;
             font-weight     : 600;
@@ -32,6 +32,21 @@
             font-weight     : 600;
             padding         : 8px 66px;
 
+        }
+    }
+}
+
+@media screen and (max-width: @bootstrap__lg) {
+    .minicart-wrapper {
+
+        .action.showcart,
+        .action.showcart.active {
+
+            &:before,
+            &:active:before,
+            &:hover:before {
+                padding: 8px 18px;
+            }
         }
     }
 }
