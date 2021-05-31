@@ -3,21 +3,22 @@
 
 
 & when (@media-common =true) {
-    body {
-        font-family: @font-opensans;
+    .page-products,
+    .catalog-product-view {
+        p,
+        a,
+        ul,
+        li,
+        h1,
+        span,
+        label,
+        strong,
+        select,
+        option {
+            font-family: @font-opensans;
+        }
     }
-    p,
-    a,
-    ul,
-    li,
-    h1,
-    span,
-    label,
-    strong,
-    select,
-    option {
-        font-family: @font-opensans;
-    }
+   
     .page-wrapper .breadcrumbs {
         max-width: 1650px;
         border-bottom: solid black 1px;
