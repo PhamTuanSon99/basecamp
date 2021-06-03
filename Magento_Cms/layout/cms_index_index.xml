@@ -8,15 +8,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="page.wrapper">
-            <container name="img.cms" htmlTag="div" htmlClass="head__img container1">
+            <container name="img.cms" htmlTag="div" htmlClass="head__img container1" before="main.content">
                 <block class="Magento\Framework\View\Element\Template" name="head.img" template="Magento_Cms::content_cms.phtml"/>
-            </container>
-            <container name="content.cms" htmlTag="div" htmlClass="logo__img container1">
-                <block class="Magento\Framework\View\Element\Template" name="logo.content" template="Magento_Cms::logo_cms.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="profit.content" template="Magento_Cms::profit_cms.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="offer.content" template="Magento_Cms::offer_cms.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="service.content" template="Magento_Cms::service_cms.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="adv.content" template="Magento_Cms::adv_cms.phtml"/>
             </container>
             <container name="content.product" htmlTag="div" htmlClass="product__content container2">
                 <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::product_cms.phtml" name="product.content"/>
@@ -24,9 +17,6 @@
             <container name="content.news" htmlTag="div" htmlClass="news__content container2">
                 <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::news_cms.phtml" name="news.content"/>
             </container>
-        </referenceContainer>
-        <referenceContainer name="footer-container">
-            <block name="footer.content" template="Magento_Cms::footer_cms.phtml" />
         </referenceContainer>
     </body>
 </page>

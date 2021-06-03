@@ -1,12 +1,5 @@
-<p class="news__heading">news</p>
-<?= $block->getLayout()
-        ->createBlock('Magento\Framework\View\Element\Template')
-        ->setTemplate('Magento_Cms::news/news_banner.phtml')
-        ->toHtml();
-?>
-
-<?= $block->getLayout()
-        ->createBlock('Magento\Framework\View\Element\Template')
-        ->setTemplate('Magento_Cms::news/news_items.phtml')
+<?=$block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('news-cms')
         ->toHtml();
 ?>
