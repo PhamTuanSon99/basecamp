@@ -8,7 +8,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="page.wrapper">
-            <container name="img.cms" htmlTag="div" htmlClass="head__img container1" before="main.content">
+            <container name="img.cms" htmlTag="div" htmlClass="head__img container1">
                 <block class="Magento\Framework\View\Element\Template" name="head.img" template="Magento_Cms::content_cms.phtml"/>
             </container>
             <container name="content.product" htmlTag="div" htmlClass="product__content container2">

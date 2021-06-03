@@ -10,14 +10,11 @@
 // Common
 // ----------------------------------------------------------------
 & when (@media-common=true) {
-    //
-    // container(admin -> page -> homepage content)
-    // ----------------------------------------------------------------
-    .cms-home > .page-wrapper > .page-main {
+
+    .cms-home > .page-wrapper > page-main {
         max-width: unset;
         color: @color-container1;
         font-family: @font-caveat-brush;
-        padding: 0;
     }
 
     //
@@ -140,6 +137,7 @@
         &.profit__img {
             position: initial;
             transform: unset;
+            
         }
 
         &.summer__offer {
@@ -200,7 +198,7 @@
 
     .profit__content {
         position: absolute;
-        top: 49%;
+        top: 50%;
         transform: translateY(-39%);
         width: 100%;
         text-align: center;
@@ -225,7 +223,7 @@
 }
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
-    .cms-home{  
+    .cms-home {
         .product-item-actions .actions-primary+.actions-secondary {
             display: none;
         }
