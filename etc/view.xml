@@ -151,8 +151,8 @@
                 <height>340</height>
             </image>
             <image id="related_products_list" type="small_image">
-                <width>152</width>
-                <height>190</height>
+                <width>300</width>
+                <height>300</height>
             </image>
             <image id="review_page_product_image" type="small_image">
                 <width>285</width>

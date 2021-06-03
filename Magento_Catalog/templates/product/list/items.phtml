@@ -178,7 +178,7 @@ $_item = null;
                 <?php if ($type == 'related' && $canItemsAddToCart):?>
                 <?php endif; ?>
                 <div class="products wrapper grid products-grid products-<?= $block->escapeHtmlAttr($type) ?>">
-                    <ol class="products list items product-items">
+                    <ol class="products list items product-items product-slick">
                         <?php foreach ($items as $_item):?>
                             <?php $available = ''; ?>
                             <?php if (!$_item->isComposite() && $_item->isSaleable() && $type == 'related'):?>
@@ -311,6 +311,33 @@ $_item = null;
                     }
                 }
             }
+            </script>
+            <script>
+                require([
+                    'jquery',
+                    'slick',
+                    'domReady!'
+                ], function ($) {
+                    
+                    $(".product-slick").slick({
+                        dots: false,
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        // nextArrow: false,
+                        // prevArrow: false,
+                        arrows: false,
+                        responsive: [
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 2,
+                                }
+                            }
+                        ]
+                    });
+                });
             </script>
         <?php endif;?>
         <?php endif;?>

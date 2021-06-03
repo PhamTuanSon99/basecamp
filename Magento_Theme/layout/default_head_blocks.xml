@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <css src="css/bootstrap.min.css"/>
         <css src="css/all.min.css"/>
+        <css src="css/all.css" />
         <script src="js/bootstrap.min.js"/>
     </head>
     <body>

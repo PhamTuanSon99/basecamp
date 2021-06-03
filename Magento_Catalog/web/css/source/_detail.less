@@ -12,11 +12,26 @@
         }
         .related {
             position: absolute;
-            top: 46.5%;
+            top: 64.5%;
             left: 65%;
             width: 30%;
         }
     }
+    // .page-layout-1column .product-info-main{width:60%}
+    // .page-layout-1column .product.media{width:40%}
+    // @media only screen and (min-width: 750px) {
+    //     .product-single__media-wrapper {
+    //         width: 80%;
+    //         float: right;
+    //     }
+    //     .thumbnails-wrapper.thumbnails-slider--active {
+    //         float: left;
+    //         width: 15%;
+    //     }
+    //     .product-single__thumbnails-item {
+    //         flex: 0 0 100% !important;
+    //     }
+    //     }
     .product.media  .fotorama__wrap {
         position: relative;
         display: flex;
@@ -50,7 +65,7 @@
         justify-content: space-between;
         .image,
         .video {
-            width: 511px;
+            width: 510px;
             font-size: 14px;
             color: #5b5b5b;
             font-weight: 400;
@@ -60,10 +75,10 @@
             }
         }
     }
-    .products-grid .product-item-actions {
-        display: none;
+    // .products-grid .product-item-actions {
+    //     display: none;
     
-    }
+    // }
 
     .product.info.detailed .value {
         font-size: 18px;
@@ -108,4 +123,62 @@
         .lib-css(transform, uppercase);
         padding: 11px 15px;
     }
+
+    .product-slick .product-item-info {
+        width: 95%;
+    }
+    .product-slick .product-item .old-price {
+        display: none;
+    }
+    .product-slick .product-item .price-box {
+        margin: 20px 0;
+    }
+    .product-slick .product-item-details .product-item-name .product-item-link {
+        font-size: 16px;
+    }
+}
+
+//Mobile
+
+//576px
+@media screen and(max-width: @bootstrap__sm) {
+   
+}
+
+//767px
+@media screen and(max-width: @bootstrap__md) {
+
+    .page-layout-1column .column.main {
+        .product-info-main {
+            .lib-css(width, 100%);
+        }
+        .product.media {
+            .lib-css(width, 100%);
+        }
+        .product.info.detailed {
+            .lib-css(width, 100%);
+        }
+        .related {
+            position: relative;
+            top: unset;
+            left: unset;
+            width: 100%;
+        }
+    }
+
+}
+
+//Desktop
+
+
+//992
+@media screen and (max-width: @bootstrap__lg) {
+}
+
+//1200px
+@media screen and (max-width: @bootstrap__xl) { 
+}
+
+//1400px
+@media screen and (max-width: @bootstrap__xxl) {
 }
