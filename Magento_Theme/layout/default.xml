@@ -8,8 +8,19 @@
                 <argument name="logo_alt" xsi:type="string">Base Camp logo</argument>
             </arguments>
         </referenceBlock>
-        <referenceContainer name="header.panel.wrapper" remove="true" />
-        <referenceContainer name="footer" remove="true" />
-        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="register-link-login" remove="true" />
+        <referenceBlock name="authorization-link" remove="true" />
+        <block name="promotion" class="Magento\Cms\Block\Block">
+            <arguments>
+                <argument name="block_id" xsi:type="string">promotion</argument>
+            </arguments>
+        </block>
+        <move element="promotion" destination="top.container"/>
+        <referenceContainer name="footer">
+            <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="form.subscribe" remove="true"/>
+            <block name="footer.custom" template="Magento_Theme::footer-custom.phtml" />
+        </referenceContainer>
+        <move element="copyright" destination="footer" after="footer.custom"/>
     </body>
 </page>

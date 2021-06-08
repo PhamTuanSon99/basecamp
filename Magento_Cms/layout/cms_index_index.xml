@@ -25,8 +25,5 @@
                 <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::news_cms.phtml" name="news.content"/>
             </container>
         </referenceContainer>
-        <referenceContainer name="footer-container">
-            <block name="footer.content" template="Magento_Cms::footer_cms.phtml" />
-        </referenceContainer>
     </body>
 </page>
