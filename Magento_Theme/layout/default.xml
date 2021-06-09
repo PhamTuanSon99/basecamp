@@ -8,8 +8,41 @@
                 <argument name="logo_alt" xsi:type="string">Base Camp logo</argument>
             </arguments>
         </referenceBlock>
-        <referenceBlock name="register-link-login" remove="true" />
-        <referenceBlock name="authorization-link" remove="true" />
+        <referenceBlock name="header.links">
+            <referenceBlock name="authorization-link-login" remove="true"/>
+            <referenceBlock name="register-link" remove="true"/>
+            <referenceBlock name="header" remove="true"/>
+            <block class="Magento\Framework\View\Element\Html\Link" name="my-account-custom" before="-">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                    <argument name="path" xsi:type="string">customer/account</argument>
+                    <argument name="class" xsi:type="string">my-account-link</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="my-wishlist-custom">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Wishlist</argument>
+                    <argument name="path" xsi:type="string">wishlist</argument>
+                    <argument name="class" xsi:type="string">my-wishlist-link</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="contact-us">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact us</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                    <argument name="class" xsi:type="string">contact-us</argument>
+                </arguments>
+            </block>
+            <block name="call-us" class="Magento\Cms\Block\Block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">call-us</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="top.links">
+            <referenceBlock name="my-account-link" remove="true"/>
+            <referenceBlock name="wish-list-link" remove="true"/>
+        </referenceBlock>
         <block name="promotion" class="Magento\Cms\Block\Block">
             <arguments>
                 <argument name="block_id" xsi:type="string">promotion</argument>
