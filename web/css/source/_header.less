@@ -269,7 +269,7 @@
 
             .counter.qty {
                 top  : -32px;
-                right: 50px;
+                right: 90px;
                 left : unset;
             }
         }
@@ -277,12 +277,6 @@
 }
 
 @media screen and (max-width: @bootstrap__md) {
-    .logo {
-        img {
-            width: 40%;
-        }
-    }
-
     .navigation {
         margin-top: -26px;
     }
@@ -303,6 +297,24 @@
             &:active:before,
             &:hover:before {
                 padding: 8px 18px;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: @bootstrap__sm) and (max-width: @bootstrap__md) {
+    .minicart-wrapper {
+
+        .action.showcart {
+            .counter-price {
+                top : -30px;
+                left: 70px;
+            }
+
+            .counter.qty {
+                top  : -32px;
+                right: 90px;
+                left : unset;
             }
         }
     }
