@@ -93,14 +93,15 @@
     .promotion {
         background-color: @color-promotion;
         display         : flex;
-        height          : 40px;
         justify-content : center;
+        height          : auto;
         margin-top      : 10px;
         width           : 100%;
 
         ul {
             color          : @color-nav;
-            display        : inline-flex;
+            display        : flex;
+            flex-wrap      : wrap;
             font-size      : @font-size-promotion;
             font-weight    : 400;
             justify-content: space-between;
@@ -127,27 +128,38 @@
         }
     }
 
-    .minicart-wrapper .action.showcart {
-        .counter.qty {
-            position     : absolute;
-            top          : 20%;
-            left         : -44%;
-            background   : @color-qty-minicart;
-            border-radius: 12px;
-        }
+    .minicart-wrapper {
+        .action.showcart {
+            .counter.qty {
+                position     : absolute;
+                top          : 20%;
+                background   : @color-qty-minicart;
+                border-radius: 12px;
+                left         : -80px;
+            }
 
-        .counter-price {
-            position : absolute;
-            top      : 25%;
-            left     : -28%;
-            color    : @color-price-minicart;
-            font-size: @font-size-price-minicart;
+            .counter-price {
+                position : absolute;
+                top      : 25%;
+                color    : @color-price-minicart;
+                font-size: @font-size-price-minicart;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: @bootstrap__sm) {
+    .minicart-wrapper {
+
+        .action.showcart {
+            .counter-price {
+                left: -50px;
+            }
         }
     }
 }
 
 @media screen and(min-width: @bootstrap__md) {
-
     .page-header {
         .panel.wrapper {
             background-color: unset;
@@ -185,12 +197,24 @@
         .level0 {
             margin-right  : 0;
             text-transform: capitalize;
-        }
 
-        .level0>.level-top {
-            font-size  : 18px;
-            font-weight: 600;
-            color      : @color-nav;
+            >.level-top {
+                font-size  : 18px;
+                font-weight: 600;
+                color      : @color-nav;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: @bootstrap__lg) {
+    .page-header {
+        .header.panel {
+            >.header.links {
+                >li {
+                    margin: 0 54px 0 -10px;
+                }
+            }
         }
     }
 }
@@ -217,15 +241,59 @@
     .navigation {
         top: 0;
     }
+
+    .minicart-wrapper {
+
+        .action.showcart {
+            .counter.qty {
+                left: -90px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @bootstrap__sm) {
+    .logo {
+        img {
+            width: 70%;
+        }
+    }
+
+    .minicart-wrapper {
+
+        .action.showcart {
+            .counter-price {
+                top : -30px;
+                left: 70px;
+            }
+
+            .counter.qty {
+                top  : -32px;
+                right: 50px;
+                left : unset;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: @bootstrap__md) {
+    .logo {
+        img {
+            width: 40%;
+        }
+    }
+
     .navigation {
         margin-top: -26px;
+    }
+
+    .top-container {
+        padding: unset;
     }
 }
 
 @media screen and (max-width: @bootstrap__lg) {
+
     .minicart-wrapper {
 
         .action.showcart,
@@ -236,19 +304,11 @@
             &:hover:before {
                 padding: 8px 18px;
             }
-
-            .counter.qty {
-                left: -85%;
-            }
         }
-    }
-
-    .minicart-wrapper .action.showcart .counter-price {
-        left: -45%;
     }
 }
 
-@media screen and(max-width: @bootstrap__custom) {
+@media screen and(min-width: @bootstrap__md) and (max-width: @bootstrap__custom) {
     .minicart-wrapper {
         margin-right: 12px;
     }

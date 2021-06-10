@@ -34,6 +34,11 @@
 
         &.profit__img {
             width: 345px;
+            margin-right: 0.5%;
+
+            &:nth-child(5) {
+                margin-right: 0;
+            }
         }
 
         &.summer__offer {
@@ -106,6 +111,23 @@
 }
 
 //
+// 1800px
+// ----------------------------------------------------------------
+@media screen and (max-width: @bootstrap__custom) { 
+    .news__title {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 2px;
+    }
+
+    .news__subtitle {
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+//
 // 1400px
 // ----------------------------------------------------------------
 @media screen and (max-width: @bootstrap__xxl) {
@@ -161,7 +183,26 @@
     .product__subtitle {
         transform: unset;
     }
+
+    .news__title {
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+        letter-spacing: -1px;
+
+    }
+
+    .news__subtitle {
+        font-size: 12px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .news__info a {
+        font-size: 12px;
+    }
 }
+
 
 //
 // 1200px
@@ -204,6 +245,48 @@
 
     .profit__content {
         font-size: 30px;
+    }
+
+    .news {
+        &__banner {
+            flex: 100%;
+            margin-right: 0;
+            padding-left: 0;
+            //max-height: 400px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__body {
+            justify-content: space-around;
+            padding-top: 35px;
+        }
+
+        &__item {
+            max-width: unset;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            font-size: 24px;
+            letter-spacing: 0;
+            max-width: unset;
+            margin: 15px 0;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        &__info a {
+            font-size: 16px;
+        }
     }
 }
 
@@ -260,5 +343,90 @@
 
     .profit__content {
         font-size: 25px;
+    }
+
+    .news {
+        &__title {
+            font-size: 18px;
+            margin: 6px 0;
+        }
+
+        &__subtitle {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        &__info a {
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and(max-width: @bootstrap__md - 1) {
+    .banner {
+        &__title {
+            font-size: 60px;
+            line-height: 45px;
+        }
+
+        &__subtitle {
+            font-size: 25px;
+            line-height: 10px;
+        }
+    }
+
+    .banner__content {
+        &.title__img {
+            width: 150px;
+        }
+
+        &.summer__offer,
+        &.holiday__offer {
+            width: 200px;
+        }
+
+        &.half__price,
+        &.ruck__sack {
+            width: 200px;
+        }
+
+        &.climbing__equipment {
+            .banner__subtitle {
+                font-size: 30px;
+            }
+        }
+
+        &.adv__body {
+            .banner__title {
+                font-size: 65px;
+            }
+
+            .banner__subtitle {
+                height: 25px;
+                font-size: 30px;
+                margin-top: -14px;
+                padding-top: 6px;
+            }
+        }
+    }
+
+    .profit__content {
+        font-size: 18px;
+    }
+
+    .news {
+        &__title {
+            font-size: 18px;
+            margin: 6px 0;
+        }
+
+        &__subtitle {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        &__info a {
+            font-size: 13px;
+        }
     }
 }
