@@ -50,11 +50,15 @@
             justify-content: center;
             float          : unset;
 
-            >li>a {
+            >li {
                 font-size  : @font-size-header-link;
-                color      : @color-header-link  !important;
                 font-weight: 400;
                 font-family: @font-opensans;
+                text-align : center;
+
+                >a {
+                    color: @color-header-link  !important;
+                }
             }
         }
     }
@@ -132,17 +136,24 @@
         .action.showcart {
             .counter.qty {
                 position     : absolute;
-                top          : 20%;
+                top          : 8px;
                 background   : @color-qty-minicart;
                 border-radius: 12px;
-                left         : -80px;
+                left         : -45%;
+                font-family  : @font-opensans;
+                font-weight  : 600;
+                font-size    : 16px;
+                box-sizing   : content-box;
             }
 
             .counter-price {
-                position : absolute;
-                top      : 25%;
-                color    : @color-price-minicart;
-                font-size: @font-size-price-minicart;
+                position   : absolute;
+                top        : 25%;
+                color      : @color-price-minicart;
+                font-size  : @font-size-price-minicart;
+                font-size  : 16px;
+                font-family: @font-opensans;
+                font-weight: 600;
             }
         }
     }
@@ -153,7 +164,7 @@
 
         .action.showcart {
             .counter-price {
-                left: -50px;
+                left: -58px;
             }
         }
     }
@@ -246,7 +257,11 @@
 
         .action.showcart {
             .counter.qty {
-                left: -90px;
+                left: -46%;
+            }
+
+            .counter-price {
+                left: -28%;
             }
         }
     }
@@ -263,13 +278,13 @@
 
         .action.showcart {
             .counter-price {
-                top : -30px;
-                left: 70px;
+                top  : -30px;
+                right: 0;
             }
 
             .counter.qty {
                 top  : -32px;
-                right: 90px;
+                right: 78%;
                 left : unset;
             }
         }
@@ -308,12 +323,12 @@
         .action.showcart {
             .counter-price {
                 top : -30px;
-                left: 70px;
+                left: 62%;
             }
 
             .counter.qty {
                 top  : -32px;
-                right: 90px;
+                right: 78%;
                 left : unset;
             }
         }
