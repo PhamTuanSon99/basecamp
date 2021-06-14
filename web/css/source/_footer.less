@@ -1,8 +1,7 @@
 & when (@media-common =true) {
     #stay-connected+ul {
         li {
-            display     : inline-block;
-            margin-right: 20px;
+            display: inline-block;
         }
     }
 
@@ -162,7 +161,7 @@
     }
 }
 
-@media screen and (min-width: @bootstrap__md) {
+@media screen and (min-width: 769px) {
     #accordion-footer {
         display: none;
     }
@@ -177,12 +176,6 @@
 
     .footer__title {
         margin-bottom: 26px;
-    }
-}
-
-@media screen and (max-width: @bootstrap__md) {
-    .footer__info {
-        display: none;
     }
 }
 
@@ -223,5 +216,19 @@
 
     .fa-twitter {
         margin-right: 12px;
+    }
+}
+
+@media screen and (max-width: @bootstrap__md) {
+    .footer__info {
+        display: none;
+    }
+}
+
+@media screen and (max-width: @bootstrap__xxl) {
+    #stay-connected+ul {
+        li {
+            margin-right: 12px;
+        }
     }
 }
