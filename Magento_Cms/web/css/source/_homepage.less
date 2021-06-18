@@ -1,7 +1,7 @@
 //remove margin from navigation
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     div.nav-sections {
-        margin-bottom: -1px;
+        margin-bottom: -9px;
     }
 }
 
@@ -22,8 +22,8 @@
     // Containers
     // ----------------------------------------------------------------
     .container1 {
-        max-width: 1920px;
-        padding: 0 3.65%;
+        max-width: 1780px;
+        margin: auto;
         color: @color-container1;
         font-family: @font-caveat-brush;
 
@@ -60,8 +60,11 @@
     .banner {
         &__img {
             position: relative;
+            max-width: 1780px;
             max-height: 521.25px;
             height: auto;
+            margin: auto;
+            text-align: center;
 
             img {
                 width: 100%;
