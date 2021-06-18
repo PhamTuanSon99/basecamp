@@ -304,10 +304,7 @@
         }
 
         &.summer__offer,
-        &.holiday__offer {
-            width: 200px;
-        }
-
+        &.holiday__offer,
         &.half__price,
         &.ruck__sack {
             width: 200px;
@@ -354,7 +351,10 @@
     }
 }
 
-@media screen and(max-width: @bootstrap__md - 1) {
+//
+// 767px
+// ----------------------------------------------------------------
+@media screen and (max-width: (@bootstrap__md - 1)) {
     .banner {
         &__title {
             font-size  : 60px;
@@ -369,35 +369,37 @@
 
     .banner__content {
         &.title__img {
-            width: 150px;
+            width: 138px;
         }
 
         &.summer__offer,
-        &.holiday__offer {
-            width: 200px;
-        }
-
+        &.holiday__offer,
         &.half__price,
         &.ruck__sack {
-            width: 200px;
+            width: 150px;
+        }
+
+        &.ruck__sack > .banner__subtitle {
+            transform: unset;
         }
 
         &.climbing__equipment {
             .banner__subtitle {
-                font-size: 30px;
+                font-size: 20px;
+                margin: 0;
             }
         }
 
         &.adv__body {
             .banner__title {
-                font-size: 65px;
+                font-size: 55px;
             }
 
             .banner__subtitle {
-                height     : 25px;
-                font-size  : 30px;
-                margin-top : -14px;
-                padding-top: 6px;
+                height: 22px;
+                font-size: 25px;
+                margin-top: -10px;
+                padding-top: 8px;
             }
         }
     }
@@ -407,19 +409,106 @@
     }
 
     .news {
+        &__body {
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        &__item {
+            flex: 100%;
+            padding-top: 30px;
+
+            &:nth-child(2) {
+                margin: 0;
+            }
+        }
+
         &__title {
-            font-size: 18px;
-            margin   : 6px 0;
+            font-size: 28px;
+            line-height: 30px;
+            margin: 10px 0 20px 0;
         }
 
         &__subtitle {
-            font-size    : 15px;
-            margin-bottom: 4px;
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 20px;
         }
 
         &__info a {
-            font-size: 13px;
+            font-size: 18px;
         }
+    }
+}
+
+//
+// 575px
+// ----------------------------------------------------------------
+@media screen and (max-width: (@bootstrap__sm - 1)) {
+    .banner {
+        &__title {
+            font-size: 80px;
+            line-height: 65px;
+        }
+
+        &__subtitle {
+            font-size: 40px;
+            line-height: 20px;
+        }
+
+        &__img{
+            img {
+                min-height: 200px;
+                object-fit: cover;
+                object-position: center right;
+            }
+        }
+
+        &__profit,
+        &__offer,
+        &__service {
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
+
+        &__items {
+            padding-top: 20px;
+
+            &:nth-child(n+2) {
+                margin: 0;
+            }
+        }
+    }
+
+    .banner__content {
+        &.title__img {
+            width: 170px;
+
+            .banner__subtitle {
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+
+        &.summer__offer,
+        &.holiday__offer,
+        &.half__price,
+        &.ruck__sack {
+            width: 265px;
+        }
+
+        &.profit__img {
+            flex: 48%;
+            margin-right: 2%;
+
+            &:nth-child(5) > .banner__items {
+                width: 48%;
+            }
+        }
+    }
+
+    .profit__content {
+        font-size: 35px;
     }
 }
 
