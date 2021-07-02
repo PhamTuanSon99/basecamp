@@ -1,0 +1,177 @@
+<div id="accordion-footer">
+    <div data-role="collapsible" class="col">
+        <div data-role="trigger">
+            <div class="footer__title">browse basecamp</div>
+        </div>
+    </div>
+    <div data-role="content">
+        <?php
+        echo $this->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('browse-basecamp')
+            ->toHtml();
+        ?>
+    </div>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <div class="footer__title">my account</div>
+        </div>
+    </div>
+    <div data-role="content">
+        <?php
+        echo $this->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('my-account')
+            ->toHtml();
+        ?>
+    </div>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <div class="footer__title">terms and conditions</div>
+        </div>
+    </div>
+    <div data-role="content">
+        <?php
+        echo $this->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('terms-and-conditions')
+            ->toHtml();
+        ?>
+    </div>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <div class="footer__title">we are located at:</div>
+        </div>
+    </div>
+    <div data-role="content" class="row">
+        <div class="col">
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('dublin-address')
+                ->toHtml();
+            ?>
+        </div>
+        <div class="col">
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('kilkenny-address')
+                ->toHtml();
+            ?>
+        </div>
+    </div>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <div class="footer__title">stay connected</div>
+        </div>
+    </div>
+    <div data-role="content">
+        <div id="stay-connected"></div>
+        <?php
+        echo $this->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('stay-connected')
+            ->toHtml();
+        ?>
+    </div>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <div class="footer__title">we accept</div>
+        </div>
+    </div>
+    <div data-role="content">
+        <a href="#">
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('payment')
+                ->toHtml();
+            ?>
+        </a>
+    </div>
+</div>
+
+<div class="footer__info container-fluid">
+    <div class="row">
+        <div class="footer__block block__1 col-md col-xxl-3">
+            <div class="footer__title">browse basecamp</div>
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('browse-basecamp')
+                ->toHtml();
+            ?>
+
+            <div class="footer__title" id="stay-connected">stay connected</div>
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('stay-connected')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="footer__block block__2 col-md col-xxl-2">
+            <div class="footer__title">my account</div>
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('my-account')
+                ->toHtml();
+            ?>
+
+            <div class="footer__title" id="accept">we accept</div>
+            <a href="#">
+                <?php
+                echo $this->getLayout()
+                    ->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('payment')
+                    ->toHtml();
+                ?>
+            </a>
+        </div>
+
+        <div class="footer__block block__3 col-md col-xxl-3">
+            <div class="footer__title">terms and conditions</div>
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('terms-and-conditions')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="footer__block block__4 col-md col-xxl">
+            <div class="footer__title">we are located at:</div>
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('dublin-address')
+                ->toHtml();
+            ?>
+            <div class="line-bottom"></div>
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('kilkenny-address')
+                ->toHtml();
+            ?>
+        </div>
+    </div><!-- row -->
+</div>
+
+<script>
+    require(['jquery', 'accordion'], function($) {
+        $("#accordion-footer").accordion({
+            "openedState": "active",
+            "collapsible": true,
+            "active": [],
+            "multipleCollapsible": true,
+            "icons": {
+                "header": "fas fa-chevron-right",
+                "activeHeader": "fas fa-chevron-down"
+            }
+        });
+    });
+</script>
