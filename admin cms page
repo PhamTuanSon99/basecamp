@@ -1,0 +1,67 @@
+<div class="logo__img container1">
+<div class="banner__logo"><img src="{{media url="wysiwyg/Layer_16.png"}}" alt=""></div>
+<div class="banner__profit">
+<div class="banner__content profit__img">
+<div class="banner__items"><img src="{{media url="wysiwyg/Layer_17.png"}}" alt="">
+<p class="profit__content">camping</p>
+</div>
+</div>
+<div class="banner__content profit__img">
+<div class="banner__items"><img src="{{media url="wysiwyg/Layer_18.png"}}" alt="">
+<p class="profit__content">hiking</p>
+</div>
+</div>
+<div class="banner__content profit__img">
+<div class="banner__items"><img src="{{media url="wysiwyg/Layer_19.png"}}" alt="">
+<p class="profit__content">packs</p>
+</div>
+</div>
+<div class="banner__content profit__img">
+<div class="banner__items"><img src="{{media url="wysiwyg/Layer_20.png"}}" alt="">
+<p class="profit__content">climbing</p>
+</div>
+</div>
+<div class="banner__content profit__img">
+<div class="banner__items"><img src="{{media url="wysiwyg/Layer_21.png"}}" alt="">
+<p class="profit__content">fitness</p>
+</div>
+</div>
+</div>
+<div class="banner__offer">
+<div class="banner__items"><img src="{{media url="wysiwyg/summer_offer.png"}}" alt="">
+<div class="banner__content summer__offer">
+<p class="banner__title">summer offers</p>
+</div>
+</div>
+<div class="banner__items"><img src="{{media url="wysiwyg/holiday_offer.png"}}" alt="">
+<div class="banner__content holiday__offer">
+<p class="banner__title">holiday offers</p>
+<p class="banner__subtitle">explore now</p>
+</div>
+</div>
+</div>
+<div class="banner__service">
+<div class="banner__items"><img src="{{media url="wysiwyg/Layer_24.png"}}" alt="">
+<div class="banner__content half__price">
+<p class="banner__title">half price</p>
+</div>
+</div>
+<div class="banner__items"><img src="{{media url="wysiwyg/Layer25.png"}}" alt="">
+<div class="banner__content ruck__sack">
+<p class="banner__title">ruck sack</p>
+<p class="banner__subtitle">offer price</p>
+</div>
+</div>
+<div class="banner__items"><img src="{{media url="wysiwyg/Layer26.png"}}" alt="">
+<div class="banner__content climbing__equipment">
+<p class="banner__subtitle">buy now</p>
+</div>
+</div>
+</div>
+<div class="banner__ads"><img src="{{media url="wysiwyg/Layer27.png"}}" alt="">
+<div class="banner__content adv__body">
+<p class="banner__title">travel essentials</p>
+<p class="banner__subtitle">shop now</p>
+</div>
+</div>
+</div>
