@@ -1,0 +1,342 @@
+& when (@media-common =true) {
+
+    //style default
+    body {
+        font-family: @font-opensans-regular;
+    }
+
+    .style__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page {
+        &__logo {
+            position: relative;
+            flex: 48%;
+            margin-right: 2%;
+            text-align: right;
+
+            &:after {
+                content: '';
+                width: 1px;
+                border: 1px solid @color-green-standard;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        &__heading {
+            flex: 48%;
+        }
+
+        &__title {
+            font-size: 50px;
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .open_sans {
+        &--regular {
+            font-family: @font-opensans;
+            font-size: 14px;
+            line-height: 15px;
+            font-weight: 400;
+        }
+
+        &--semibold {
+            font-family: @font-opensans;
+            font-size: 14px;
+            line-height: 15px;
+            font-weight: 600;
+        }
+    }
+
+    .caveat_brush {
+        &__title {
+            font-family: @font-caveat-brush;
+            font-weight: 400;
+            color: @color-container1;
+            background-color: #000;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        &__subtitle {
+            font-family: @font-caveat-brush;
+            font-weight: 400;
+            color: @color-subtitle;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+    }
+
+    .navigation-tab>.item.title>.switch, .product.data.items>.item.title>.switch {
+        border-radius: 5px;
+    }
+
+    .navigation-tab>.item.title:not(.disabled)>.switch:active, .product.data.items>.item.title:not(.disabled)>.switch:active, .navigation-tab>.item.title.active>.switch, .product.data.items>.item.title.active>.switch, .navigation-tab>.item.title.active>.switch:focus, .product.data.items>.item.title.active>.switch:focus, .navigation-tab>.item.title.active>.switch:hover, .product.data.items>.item.title.active>.switch:hover {
+        background-color: #4f4f4f;
+        color: #fff;
+    }
+
+    .navigation-tab>.item.title, .product.data.items>.item.title {
+        margin: 0 0 0 0.5%;
+        width: 33%;
+
+        &:nth-child(1){
+            margin: 0;
+        }
+    }
+
+    .navigation-tab.navigation-tab>.item.content {
+        border: 1px solid #b4b4b4;
+        margin-top: 32px;
+    }
+
+    .navigation-tab {
+        width: 45%;
+    }
+
+    // button
+    button {
+        .lib-css(border-radius, 0);
+        .lib-css(max-width, @size-200);
+        .lib-css(text-transform, uppercase);
+        .lib-button(@_button-background: @color-green-default,
+            @_button-background-active: @color-green-standard,
+            @_button-font-family: @font-roboto-bold,
+            @_button-color: @color-white,
+            @_button-color-hover: @color-white,
+            @_button-color-active: @color-white,
+            @_button-border: @size-1px solid @color-green-default,
+            @_button-font-size: @font-size13,
+            @_button-background-hover: @color-green-standard,
+        );
+
+        &.active {
+            background: @color-green-standard;
+        }
+
+        &:visited {
+            background: @color-green-standard;
+            color: @color-white;
+        }
+
+        //standard button
+        &.standard-button,
+        &.action.tocart.primary {
+            .lib-button(@_button-background: @color-white,
+                @_button-color: @color-black,
+                @_button-border: @size-1px solid @color-black,
+                @_button-color-hover: @color-white,
+                @_button-background-hover: @color-black,
+                @_button-font-family: @font-roboto-bold,
+                @_button-color-active: @color-white,
+                @_button-background-active: @color-black);
+        }
+
+        //standard balck button
+        &.standard-button-black {
+            .standard-button;
+            .lib-button(@_button-background: @color-black,
+                @_button-color: @color-white,
+                @_button-background-hover: @color-white,
+                @_button-color-hover: @color-black,
+                @_button-border: @size-1px solid @color-white)
+        }
+
+        //adjustable button
+        &.button-adjust {
+            .lib-button(@_button-background: @color-white,
+                @_button-color: @color-a9,
+                @_button-color-hover: @color-a9,
+                @_button-background-hover: @color-f8,
+                @_button-font-family: @font-roboto-bold,
+                @_button-color-active: @color-a9,
+                @_button-background-active: @color-f8);
+
+            &.active {
+                background: @color-f8;
+            }
+
+            &:visited {
+                background: @color-f8;
+                color: @color-a9;
+            }
+        }
+    }
+
+    // input field
+    input,
+    select,
+    textarea {
+        .lib-css(max-width, @size-200);
+        .lib-form-element-color(@_background: @color-white,
+            @_border-color: @color-ddd,
+            @_color: @color-black,
+            @_focus-color: @color-black,
+            @_focus-border-color: @color-ddd);
+    }
+
+    input {
+        &:not([disabled]):focus {
+            .lib-css(box-shadow, none);
+        }
+
+        //input adjust
+        &.input-adjust {
+            .lib-css(margin, 0px -5px);
+            .lib-css(padding-bottom, 3px);
+            .lib-css(max-width, 40px);
+            .lib-css(max-height, 40px);
+            .lib-css(text-align, center);
+            .lib-css(color, @color-333);
+        }
+
+        // input checkbox
+        &[type='checkbox'] {
+            .lib-css(visibility, hidden);
+
+            &:checked+label:before {
+                .lib-css(background, @color-white);
+                .lib-css(color, @color-black);
+                .lib-css(content, "");
+                .lib-css(text-align, center);
+                .lib-css(font-size, @size-20px);
+            }
+
+            &:checked+label:after {
+                .lib-css(content, "");
+                .lib-css(width, 5px);
+                .lib-css(height, 8px);
+                .lib-css(border-width, 0 2px 2px 0);
+                .lib-css(border-style, solid);
+                .lib-css(border-color, @color-black);
+                .lib-css(transform, rotate(45deg));
+                .lib-css(position, absolute);
+                .lib-css(left, 0);
+                .lib-css(margin, 4px 4px 4px 8px);
+            }
+
+            &+label:before {
+                .lib-css(border, @size-1px solid @color-ddd);
+                .lib-css(content, "");
+                .lib-css(display, inline-block);
+                .lib-css(margin, 0 10px -6px 0);
+                .lib-css(padding, 0);
+                .lib-css(vertical-align, top);
+                .lib-css(width, @size-20px);
+                .lib-css(height, @size-20px);
+            }
+        }
+
+        //input radio
+        &[type="radio"] {
+            .lib-css(visibility, hidden);
+
+            &:checked+label:after {
+                .lib-css(background, @color-333);
+                .lib-css(color, @color-white);
+                .lib-css(content, "");
+                .lib-css(text-align, center);
+                .lib-css(width, 8px);
+                .lib-css(height, 8px);
+                .lib-css(position, absolute);
+                .lib-css(left, 0);
+                .lib-css(margin, 7px);
+                .lib-css(border-radius, 50%);
+            }
+
+            &+label:before {
+                .lib-css(border-radius, 50%);
+                .lib-css(vertical-align, baseline);
+                .lib-css(border, @size-1px solid @color-ddd);
+                .lib-css(content, "");
+                .lib-css(display, inline-block);
+                .lib-css(margin, 0 10px -6px 0);
+                .lib-css(padding, 0);
+                .lib-css(vertical-align, top);
+                .lib-css(width, @size-20px);
+                .lib-css(height, @size-20px);
+            }
+        }
+    }
+
+    label {
+        .lib-css(cursor, pointer);
+        .lib-css(position, relative);
+    }
+
+    //input text, select
+    input[type=text],
+    select {
+        .lib-css(box-sizing, border-box);
+        .lib-css(font-size, @font-size13);
+        .lib-css(line-height, @size-30px);
+        .lib-css(color, @color-333);
+        .lib-css(font-family, @font-roboto-regular);
+        .lib-css(text-align, left);
+        .lib-css(padding, 0 @font-size13);
+
+        &:not([disabled]):focus,
+        &:focus {
+            .lib-css(box-shadow, none);
+        }
+    }
+
+    input.mage-error,
+    select.mage-error,
+    textarea.mage-error {
+        .lib-css(border-color, @color-red-validate);
+    }
+
+    div.mage-error {
+        .lib-css(color, @color-red9);
+    }
+
+    // alert
+    .message-success {
+        .lib-message(success);
+        .lib-css(background, @color-white);
+        .lib-css(border, solid @size-1px @color-green-message );
+        .lib-css(text-align, center);
+        .lib-css(color, @color-green-message);
+    }
+
+    .message-error {
+        .lib-message(error);
+        .lib-css(background, @color-white);
+        .lib-css(border, solid @size-1px @color-red-validate );
+        .lib-css(text-align, center);
+    }
+
+
+    //navigation tab
+    .navigation-tab,
+    .product.data.items {
+        .lib-data-tabs(@_tab-control-font-family: @font-roboto-bold,
+            @_tab-control-font-size: @font-size13,
+            @_tab-control-font-weight: @font-weight-700,
+            @_tab-control-line-height: @size-20px,
+            @_tab-control-background-color: @color-f9,
+            @_tab-control-color-active: @color-2d,
+        );
+
+        &.navigation-tab>.item.content,
+        &.product.data.items>.item.content {
+            .lib-css(border, @size-1px solid @color-d1);
+        }
+    }
+
+    // dropdown
+    .example-dropdown-1 {
+        .lib-dropdown();
+    }
+}
